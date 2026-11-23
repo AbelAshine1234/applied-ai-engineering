@@ -35,7 +35,9 @@ export function Sidebar({ isOpen, onClose }: { isOpen: boolean; onClose: () => v
           const query = localSearch.toLowerCase();
           return (
             m.title.toLowerCase().includes(query) ||
+            m.subtitle.toLowerCase().includes(query) ||
             m.deliverable.toLowerCase().includes(query) ||
+            m.topics.some((t) => t.toLowerCase().includes(query)) ||
             m.tasks.toLowerCase().includes(query) ||
             String(m.id).includes(query)
           );
@@ -78,7 +80,7 @@ export function Sidebar({ isOpen, onClose }: { isOpen: boolean; onClose: () => v
               type="text"
               value={localSearch}
               onChange={(e) => setLocalSearch(e.target.value)}
-              placeholder="Filter 55 modules..."
+              placeholder="Filter 55 modules & topics..."
               className="w-full rounded-md border border-line bg-card py-1.5 pl-8 pr-3 text-xs text-ink placeholder:text-muted focus:border-accent focus:outline-none transition-colors"
             />
             <svg
@@ -233,20 +235,27 @@ export function Sidebar({ isOpen, onClose }: { isOpen: boolean; onClose: () => v
                           <button
                             key={module.id}
                             onClick={() => selectModule(module.id)}
-                            className={`flex w-full items-center justify-between rounded px-2 py-1.5 text-xs text-left transition-colors ${
+                            className={`flex w-full items-start justify-between rounded px-2 py-1.5 text-xs text-left transition-colors ${
                               isCurrent
                                 ? "bg-card text-ink font-semibold border-l-2 border-l-accent shadow-doc"
                                 : "text-muted hover:bg-card/50 hover:text-ink"
                             }`}
                           >
-                            <span className="flex items-center gap-2 truncate">
-                              <span className="font-mono text-[10px] text-muted">
+                            <div className="flex items-start gap-2 truncate mr-1.5">
+                              <span className="font-mono text-[10px] text-muted mt-0.5">
                                 {module.id < 10 ? `0${module.id}` : module.id}
                               </span>
-                              <span className="truncate">{module.title}</span>
-                            </span>
+                              <div className="flex flex-col truncate">
+                                <span className={`truncate ${isCurrent ? "text-ink font-bold" : "text-ink"}`}>
+                                  {module.title}
+                                </span>
+                                <span className="font-mono text-[9px] text-muted truncate max-w-[180px]">
+                                  {module.subtitle}
+                                </span>
+                              </div>
+                            </div>
 
-                            <div className="flex items-center gap-1.5 flex-shrink-0">
+                            <div className="flex items-center gap-1.5 flex-shrink-0 mt-0.5">
                               {isDone ? (
                                 <span className="flex h-3.5 w-3.5 items-center justify-center rounded-full bg-green-500/15 text-green-600">
                                   <svg className="h-2.5 w-2.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -272,7 +281,7 @@ export function Sidebar({ isOpen, onClose }: { isOpen: boolean; onClose: () => v
 
         {/* Sidebar Footer */}
         <div className="p-3 border-t border-line bg-sidebar text-[11px] font-mono text-muted flex items-center justify-between">
-          <span>55 Technical Modules</span>
+          <span>55 Modules & Topics</span>
           <a
             href="https://github.com/AbelAshine1234/applied-ai-engineering"
             target="_blank"

@@ -107,7 +107,7 @@ export function DocsProvider({ children }: { children: React.ReactNode }) {
     const mod = ALL_MODULES.find((m) => m.id === moduleId);
     if (!mod) return;
     const completedAll: { [key: number]: boolean } = {};
-    for (let i = 0; i < mod.checklist.length; i++) {
+    for (let i = 0; i < (mod.checklistSteps ? mod.checklistSteps.length : 9); i++) {
       completedAll[i] = true;
     }
     const nextProgress = {
@@ -133,7 +133,8 @@ export function DocsProvider({ children }: { children: React.ReactNode }) {
     const mod = ALL_MODULES.find((m) => m.id === moduleId);
     if (!mod) return false;
     const count = getModuleCompletedStepsCount(moduleId);
-    return count >= mod.checklist.length;
+    const totalSteps = mod.checklistSteps ? mod.checklistSteps.length : 9;
+    return count >= totalSteps;
   };
 
   const completedModuleCount = ALL_MODULES.filter((m) => isModuleCompleted(m.id)).length;

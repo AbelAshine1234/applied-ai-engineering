@@ -24,12 +24,13 @@ export function TableOfContents() {
   const percent = Math.round((completedSteps / 9) * 100);
 
   const sections = [
-    { id: "overview", label: "01. Topics & Scope" },
-    { id: "lecture", label: "02. Curated Lecture" },
-    { id: "tasks", label: "03. Implementation Tasks" },
-    { id: "deliverable", label: "04. Deliverable Target" },
-    { id: "contract", label: "05. 9-Step Contract" },
-    { id: "prompt", label: "06. Claude Code Prompt" },
+    { id: "tasks", label: "01. Scope & Tasks" },
+    ...(module.videos && module.videos.length > 0
+      ? [{ id: "lecture", label: "02. Curated Lecture" }]
+      : []),
+    { id: "deliverable", label: "03. Deliverable Spec" },
+    { id: "contract", label: "04. 9-Step Contract" },
+    { id: "prompt", label: "05. Claude Code Prompt" },
   ];
 
   const scrollTo = (id: string) => {

@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { useDocs } from "../context/DocsContext";
 import { ALL_MODULES, getAdjacentModules } from "../data/curriculum";
+import { DELIVERABLE_DETAILS_MAP } from "../data/deliverableDetails";
 
 export function ModuleDocView() {
   const {
@@ -19,6 +20,7 @@ export function ModuleDocView() {
   const [copiedPrompt, setCopiedPrompt] = useState(false);
 
   const module = ALL_MODULES.find((m) => m.id === activeModuleId) || ALL_MODULES[0];
+  const deliverableDetail = DELIVERABLE_DETAILS_MAP[module.id];
   const { prev, next } = getAdjacentModules(module.id);
   const completedSteps = getModuleCompletedStepsCount(module.id);
   const isDone = isModuleCompleted(module.id);
@@ -71,11 +73,34 @@ export function ModuleDocView() {
           )}
         </div>
 
-        <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-ink">
-          {module.title}
-        </h1>
+        <div className="space-y-2">
+          <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-ink">
+            {module.title}
+          </h1>
+          <p className="text-sm sm:text-base text-muted font-normal leading-relaxed">
+            {module.subtitle}
+          </p>
+        </div>
 
-        <div className="rounded-lg border border-line bg-card p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        {/* Topics Chips */}
+        {module.topics && module.topics.length > 0 && (
+          <div className="flex flex-wrap items-center gap-1.5 pt-1">
+            <span className="font-mono text-[10px] text-muted mr-1 uppercase tracking-wider font-semibold">
+              Topics:
+            </span>
+            {module.topics.map((t, idx) => (
+              <span
+                key={idx}
+                className="font-mono text-[11px] px-2 py-0.5 rounded border border-line bg-card text-ink hover:border-line-hover transition-colors"
+              >
+                {t}
+              </span>
+            ))}
+          </div>
+        )}
+
+        {/* Deliverable Summary Bar */}
+        <div className="rounded-lg border border-line bg-card p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4 mt-4">
           <div>
             <div className="font-mono text-[11px] text-muted uppercase tracking-wider">
               Required Deliverable
@@ -98,7 +123,7 @@ export function ModuleDocView() {
         </div>
       </header>
 
-      {/* Implementation Tasks & Topics */}
+      {/* Scope & Implementation Tasks */}
       <section id="tasks" className="space-y-4 scroll-mt-20">
         <h2 className="text-lg font-bold text-ink flex items-center gap-2">
           <span className="font-mono text-xs text-muted">01</span>
@@ -188,33 +213,126 @@ export function ModuleDocView() {
         </section>
       )}
 
-      {/* Deliverable Target */}
-      <section id="deliverable" className="space-y-4 scroll-mt-20">
-        <h2 className="text-lg font-bold text-ink flex items-center gap-2">
-          <span className="font-mono text-xs text-muted">03</span>
-          Module Deliverable Specification
-        </h2>
-        <div className="rounded-lg border border-line bg-card p-5 space-y-4">
-          <div className="flex items-center justify-between pb-3 border-b border-line">
-            <span className="font-mono text-xs font-semibold uppercase text-ink">
-              Production Target
-            </span>
-            <span className="font-mono text-xs text-accent font-medium">
-              Self-Contained Module
-            </span>
+      {/* Deliverable Specification */}
+      <section id="deliverable" className="space-y-6 scroll-mt-20">
+        <div className="flex items-center justify-between">
+          <h2 className="text-lg font-bold text-ink flex items-center gap-2">
+            <span className="font-mono text-xs text-muted">03</span>
+            Production Deliverable Specification
+          </h2>
+          <span className="font-mono text-xs font-semibold px-2 py-0.5 rounded border border-accent/20 bg-accent-subtle text-accent">
+            Target Deliverable
+          </span>
+        </div>
+
+        <div className="rounded-lg border border-line bg-card p-6 space-y-6">
+          {/* Header & High-Level Summary */}
+          <div className="space-y-2 border-b border-line pb-4">
+            <div className="font-mono text-[11px] uppercase tracking-wider text-muted font-semibold">
+              Deliverable Target
+            </div>
+            <h3 className="text-base sm:text-lg font-bold text-ink">
+              {deliverableDetail?.title || module.deliverable}
+            </h3>
+            <p className="text-xs sm:text-sm text-muted leading-relaxed">
+              {deliverableDetail?.summary || "Self-contained production implementation satisfying all acceptance criteria with comprehensive tests."}
+            </p>
           </div>
 
-          <p className="text-sm text-ink font-semibold">
-            {module.deliverable}
-          </p>
+          {/* Target Implementation Files */}
+          {deliverableDetail?.targetFiles && deliverableDetail.targetFiles.length > 0 && (
+            <div className="space-y-2">
+              <div className="font-mono text-xs font-semibold text-muted uppercase tracking-wider">
+                Target Implementation Files:
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                {deliverableDetail.targetFiles.map((file, fIdx) => (
+                  <div
+                    key={fIdx}
+                    className="flex items-center gap-2 p-2.5 rounded border border-line bg-canvas font-mono text-xs text-ink"
+                  >
+                    <svg className="h-3.5 w-3.5 text-accent flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                    <span className="truncate">{file}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
 
-          <div className="space-y-2">
-            <div className="font-mono text-xs text-muted">Repository Directory Structure:</div>
-            <pre className="p-3 text-xs">
+          {/* Component Breakdown */}
+          {deliverableDetail?.components && deliverableDetail.components.length > 0 && (
+            <div className="space-y-3">
+              <div className="font-mono text-xs font-semibold text-muted uppercase tracking-wider">
+                Component Architecture & Technical Requirements:
+              </div>
+              <div className="grid grid-cols-1 gap-3">
+                {deliverableDetail.components.map((comp, cIdx) => (
+                  <div
+                    key={cIdx}
+                    className="p-4 rounded-lg border border-line bg-canvas space-y-2.5"
+                  >
+                    <div className="flex items-center justify-between">
+                      <h4 className="text-xs font-bold font-mono text-ink">
+                        {comp.name}
+                      </h4>
+                      <span className="font-mono text-[10px] text-muted">
+                        Component {cIdx + 1}
+                      </span>
+                    </div>
+                    <p className="text-xs text-muted leading-relaxed">
+                      {comp.description}
+                    </p>
+                    {comp.requirements && comp.requirements.length > 0 && (
+                      <ul className="space-y-1 pt-1">
+                        {comp.requirements.map((req, rIdx) => (
+                          <li
+                            key={rIdx}
+                            className="text-xs font-mono text-ink flex items-start gap-2"
+                          >
+                            <span className="text-accent mt-0.5">•</span>
+                            <span>{req}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Acceptance Criteria */}
+          {deliverableDetail?.acceptanceCriteria && deliverableDetail.acceptanceCriteria.length > 0 && (
+            <div className="space-y-3 pt-2">
+              <div className="font-mono text-xs font-semibold text-muted uppercase tracking-wider">
+                Concrete Acceptance Criteria & Verification Tests:
+              </div>
+              <div className="rounded-lg border border-line bg-canvas p-4 space-y-2">
+                {deliverableDetail.acceptanceCriteria.map((ac, acIdx) => (
+                  <div key={acIdx} className="flex items-start gap-2.5 text-xs text-ink">
+                    <svg className="h-3.5 w-3.5 text-green-600 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="leading-relaxed">{ac}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Directory Tree */}
+          <div className="space-y-2 pt-2 border-t border-line">
+            <div className="font-mono text-xs text-muted uppercase tracking-wider">
+              Directory Structure:
+            </div>
+            <pre className="p-3 text-xs overflow-x-auto">
               <code>{`applied-ai-engineering/${module.slug}/
 ├── src/
+${deliverableDetail?.targetFiles ? deliverableDetail.targetFiles.filter(f => f.startsWith("src/")).map(f => `│   ├── ${f.replace("src/", "")}`).join("\n") : "│   └── ..."}
 ├── tests/
-│   └── test_${module.slug.replace(/^\d+-/, "").replace(/-/g, "_")}.py
+${deliverableDetail?.targetFiles ? deliverableDetail.targetFiles.filter(f => f.startsWith("tests/")).map(f => `│   ├── ${f.replace("tests/", "")}`).join("\n") : `│   └── test_${module.slug.replace(/^\d+-/, "").replace(/-/g, "_")}.py`}
 ├── README.md
 └── requirements.txt`}</code>
             </pre>
@@ -222,7 +340,7 @@ export function ModuleDocView() {
         </div>
       </section>
 
-      {/* Interactive 9-Step Verification Contract */}
+      {/* Interactive 9-Step Verification Contract with Subtitles & Topics */}
       <section id="contract" className="space-y-4 scroll-mt-20">
         <div className="flex items-center justify-between">
           <h2 className="text-lg font-bold text-ink flex items-center gap-2">
@@ -238,13 +356,13 @@ export function ModuleDocView() {
           Verify each requirement before advancing. Checklist states persist automatically in your browser.
         </p>
 
-        <div className="space-y-2">
-          {module.checklist.map((item, idx) => {
+        <div className="space-y-3">
+          {module.checklistSteps.map((stepItem, idx) => {
             const isChecked = Boolean(progress[module.id]?.[idx]);
             return (
               <label
                 key={idx}
-                className={`flex items-start gap-3 rounded-lg border p-3.5 transition-all cursor-pointer ${
+                className={`flex items-start gap-3.5 rounded-lg border p-4 transition-all cursor-pointer ${
                   isChecked
                     ? "border-green-600/30 bg-green-500/5 text-ink"
                     : "border-line bg-card hover:border-line-hover text-ink"
@@ -254,15 +372,37 @@ export function ModuleDocView() {
                   type="checkbox"
                   checked={isChecked}
                   onChange={() => toggleStep(module.id, idx)}
-                  className="mt-0.5 h-4 w-4 rounded border-line text-accent focus:ring-accent"
+                  className="mt-1 h-4 w-4 rounded border-line text-accent focus:ring-accent"
                 />
-                <div className="flex-1 text-xs sm:text-sm">
-                  <span className="font-mono text-[11px] text-muted mr-2">
-                    Step {idx + 1}
-                  </span>
-                  <span className={isChecked ? "line-through text-muted" : "text-ink"}>
-                    {item}
-                  </span>
+                <div className="flex-1 space-y-1">
+                  {/* Clean Single Step Badge and Step Title */}
+                  <div className="flex items-center gap-2">
+                    <span className="font-mono text-[10px] font-bold px-1.5 py-0.2 rounded border border-line bg-canvas text-muted">
+                      0{stepItem.step}
+                    </span>
+                    <span className={`text-sm font-bold ${isChecked ? "line-through text-muted" : "text-ink"}`}>
+                      {stepItem.title}
+                    </span>
+                  </div>
+
+                  {/* Contextual Subtitle with Module Topics */}
+                  <div className={`text-xs leading-relaxed ${isChecked ? "text-muted" : "text-muted"}`}>
+                    {stepItem.subtitle}
+                  </div>
+
+                  {/* If Step 1: Render Topic Badges */}
+                  {stepItem.step === 1 && stepItem.topics && stepItem.topics.length > 0 && (
+                    <div className="flex flex-wrap gap-1 pt-1.5">
+                      {stepItem.topics.map((t, tidx) => (
+                        <span
+                          key={tidx}
+                          className="font-mono text-[10px] px-1.5 py-0.2 rounded border border-line bg-canvas text-muted"
+                        >
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+                  )}
                 </div>
               </label>
             );
@@ -315,6 +455,9 @@ export function ModuleDocView() {
             <span className="text-sm font-semibold text-ink group-hover:text-accent transition-colors mt-1">
               {prev.id < 10 ? `0${prev.id}` : prev.id}. {prev.title}
             </span>
+            <span className="font-mono text-[10px] text-muted truncate max-w-[280px] mt-0.5">
+              {prev.subtitle}
+            </span>
           </button>
         ) : (
           <div />
@@ -333,6 +476,9 @@ export function ModuleDocView() {
             </span>
             <span className="text-sm font-semibold text-ink group-hover:text-accent transition-colors mt-1">
               {next.id < 10 ? `0${next.id}` : next.id}. {next.title}
+            </span>
+            <span className="font-mono text-[10px] text-muted truncate max-w-[280px] mt-0.5">
+              {next.subtitle}
             </span>
           </button>
         ) : (

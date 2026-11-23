@@ -44,17 +44,27 @@ export interface RawLearningContractItem {
   desc: string;
 }
 
+export interface ContractStepDetail {
+  step: number;
+  title: string;
+  subtitle: string;
+  topics?: string[];
+  instruction: string;
+}
+
 export interface ModuleData {
   id: number;
   slug: string;
   phaseNum: number;
   phaseTitle: string;
   title: string;
+  subtitle: string;
+  topics: string[];
   tasks: string;
   deliverable: string;
   hours: number;
   videos: VideoItem[];
-  checklist: string[];
+  checklistSteps: ContractStepDetail[];
   claudePrompt: string;
   priorityTrack: boolean;
 }

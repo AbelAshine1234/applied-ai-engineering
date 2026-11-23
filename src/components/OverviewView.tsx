@@ -115,25 +115,31 @@ export function OverviewView() {
                   </span>
                 </div>
 
-                <div className="space-y-1.5 pt-2 border-t border-line">
+                <div className="space-y-2 pt-2 border-t border-line">
                   {phase.modules.map((m) => {
                     const done = isModuleCompleted(m.id);
                     return (
                       <button
                         key={m.id}
                         onClick={() => navigateToModule(m.id)}
-                        className="flex w-full items-center justify-between rounded p-2 text-left text-xs hover:bg-canvas transition-colors group"
+                        className="flex w-full items-start justify-between rounded p-2.5 text-left text-xs hover:bg-canvas transition-colors group border border-transparent hover:border-line"
                       >
-                        <span className="flex items-center gap-2 truncate">
-                          <span className="font-mono text-[10px] text-muted">
+                        <div className="flex items-start gap-2.5 truncate mr-2">
+                          <span className="font-mono text-[10px] text-muted mt-0.5">
                             {m.id < 10 ? `0${m.id}` : m.id}
                           </span>
-                          <span className="truncate group-hover:text-accent transition-colors font-medium text-ink">
-                            {m.title}
-                          </span>
-                        </span>
-                        <div className="flex items-center gap-2 flex-shrink-0">
-                          <span className="font-mono text-[10px] text-muted hidden sm:inline truncate max-w-[140px]">
+                          <div className="flex flex-col truncate">
+                            <span className="group-hover:text-accent transition-colors font-bold text-ink truncate">
+                              {m.title}
+                            </span>
+                            <span className="font-mono text-[10px] text-muted truncate max-w-[260px] sm:max-w-sm mt-0.5">
+                              {m.subtitle}
+                            </span>
+                          </div>
+                        </div>
+
+                        <div className="flex items-center gap-2 flex-shrink-0 mt-0.5">
+                          <span className="font-mono text-[10px] px-1.5 py-0.2 rounded border border-line bg-card text-muted hidden sm:inline truncate max-w-[140px]">
                             {m.deliverable}
                           </span>
                           {done && (
