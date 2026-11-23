@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applied AI Engineering — Curriculum & Mastery Roadmap</title>
+    <meta name="description" content="A comprehensive, battle-tested applied AI engineering curriculum and progress tracker. Master Python, deep learning, transformers from scratch, production RAG, agents, MCP, fine-tuning, and scalable inference.">
+
+    <!-- Google Fonts: Inter, Playfair Display, Fira Code -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,500&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome 6.4.0 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom Slate Dark Styling -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Ambient Grid Mesh -->
+    <div class="grid-overlay"></div>
+
+    <!-- Navigation Header -->
+    <header id="main-header">
+        <div class="container">
+            <div class="nav-container">
+                <a href="#hero" class="nav-brand">
+                    APPLIED AI <span class="brand-sub">/ ROADMAP</span>
+                </a>
+                <div class="nav-actions">
+                    <button id="btn-export-progress" class="btn btn-secondary btn-sm" title="Export progress to JSON file">
+                        <i class="fa-solid fa-file-export"></i> Export Progress
+                    </button>
+                    <button id="btn-import-progress" class="btn btn-secondary btn-sm" title="Restore progress from JSON file">
+                        <i class="fa-solid fa-file-import"></i> Import Progress
+                    </button>
+                    <input type="file" id="import-file-input" accept=".json" style="display: none;">
+                    <a href="https://github.com/AbelAshine1234/applied-ai-engineering" target="_blank" class="btn btn-primary btn-sm">
+                        <i class="fa-brands fa-github"></i> View GitHub Repo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="container">
+                <div class="status-pill">
+                    <span class="pulse-dot"></span>
+                    <span class="status-text">APPLIED AI ENGINEERING / PRODUCTION MASTERY ROADMAP</span>
+                </div>
+
+                <h1 class="hero-headline">
+                    Architecting scalable intelligence from <em>mathematical foundations</em> to production agents.
+                </h1>
+
+                <p class="hero-bio-para">
+                    A rigorous, zero-fluff syllabus bridging modern systems architecture with applied AI. Featuring curated lectures from world-class researchers (Andrej Karpathy, 3Blue1Brown, Umar Jamil, Harrison Chase), hands-on code checkpoints, dedicated chapter mini-projects, and end-to-end production capstones.
+                </p>
+
+                <!-- Master Progress Bar -->
+                <div class="master-progress-container">
+                    <div class="progress-header-row">
+                        <span class="progress-title">
+                            <i class="fa-solid fa-chart-pie" style="color: var(--accent-ice);"></i> Master Curriculum Progress
+                        </span>
+                        <span id="master-progress-percentage" class="progress-percentage">0% Complete</span>
+                    </div>
+                    <div class="progress-track">
+                        <div id="master-progress-fill" class="progress-fill" style="width: 0%;"></div>
+                    </div>
+                </div>
+
+                <!-- Stats Counter Grid -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <span class="stat-label">Total Completion</span>
+                            <i class="fa-solid fa-percent stat-icon"></i>
+                        </div>
+                        <div id="stat-total-progress" class="stat-value">0%</div>
+                        <div class="stat-sub">Across all curriculum items</div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <span class="stat-label">Mastered Checkpoints</span>
+                            <i class="fa-solid fa-square-check stat-icon"></i>
+                        </div>
+                        <div id="stat-checkpoints" class="stat-value">0 / 0</div>
+                        <div class="stat-sub">Lectures and project tasks</div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <span class="stat-label">Completed Modules</span>
+                            <i class="fa-solid fa-cubes stat-icon"></i>
+                        </div>
+                        <div id="stat-modules" class="stat-value">0 / 16</div>
+                        <div class="stat-sub">Fully verified chapters</div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <span class="stat-label">Estimated Effort</span>
+                            <i class="fa-regular fa-clock stat-icon"></i>
+                        </div>
+                        <div id="stat-hours" class="stat-value">0h / 380h</div>
+                        <div class="stat-sub">Hands-on engineering study</div>
+                    </div>
+                </div>
+
+                <!-- Toolbar & Filtering Controls -->
+                <div class="toolbar-section">
+                    <div class="search-box">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" id="search-input" placeholder="Search topics, skills, instructors, videos...">
+                    </div>
+
+                    <div class="filter-pills">
+                        <button class="filter-pill active" data-filter="all">All Modules</button>
+                        <button class="filter-pill" data-filter="foundations">Foundations (01-04)</button>
+                        <button class="filter-pill" data-filter="llm">LLM Core (05-07)</button>
+                        <button class="filter-pill" data-filter="agentic">Agents & MCP (08-10)</button>
+                        <button class="filter-pill" data-filter="production">Production & Scale (11-15)</button>
+                        <button class="filter-pill" data-filter="projects">Capstones (16)</button>
+                        <button class="filter-pill" data-filter="pending">Pending Only</button>
+                        <button class="filter-pill" data-filter="completed">Completed Only</button>
+                    </div>
+
+                    <div class="toolbar-actions">
+                        <button id="btn-expand-all" class="btn btn-secondary btn-sm" title="Expand all module accordions">
+                            <i class="fa-solid fa-angles-down"></i> Expand All
+                        </button>
+                        <button id="btn-collapse-all" class="btn btn-secondary btn-sm" title="Collapse all module accordions">
+                            <i class="fa-solid fa-angles-up"></i> Collapse All
+                        </button>
+                        <button id="btn-reset-progress" class="btn btn-secondary btn-sm" style="color: var(--accent-rose); border-color: rgba(244, 63, 94, 0.2);" title="Reset all checked items">
+                            <i class="fa-solid fa-rotate-left"></i> Reset
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Modules Dynamic Container -->
+                <div id="modules-container" class="modules-container">
+                    <!-- Injected dynamically by app.js -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Video Modal Player -->
+    <div id="video-modal" class="modal-overlay">
+        <div class="modal-box">
+            <div class="modal-header">
+                <span id="modal-video-title" class="modal-title">Lecture Video Player</span>
+                <button id="modal-close-btn" class="modal-close-btn" aria-label="Close video player">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div id="modal-iframe-container" class="video-frame-container">
+                <!-- YouTube iframe injected on demand -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <strong>Applied AI Engineering Curriculum</strong> — Curated by <a href="https://abelashine.weleba.tech" target="_blank" style="color: var(--accent-ice); text-decoration: none;">Abel Ashine</a>.
+                </div>
+                <div class="footer-links">
+                    <a href="https://github.com/AbelAshine1234/applied-ai-engineering" target="_blank"><i class="fa-brands fa-github"></i> Repository</a>
+                    <a href="https://abelashine.weleba.tech" target="_blank"><i class="fa-solid fa-globe"></i> Portfolio</a>
+                    <a href="mailto:abelashinework@gmail.com"><i class="fa-solid fa-envelope"></i> Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Curriculum Data & Script -->
+    <script src="curriculum.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

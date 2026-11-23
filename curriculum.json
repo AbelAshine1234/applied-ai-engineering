@@ -1,0 +1,1232 @@
+[
+  {
+    "id": "01-python-ai",
+    "number": "01",
+    "title": "Python for AI Engineering",
+    "badge": "Core Runtime",
+    "icon": "fa-brands fa-python",
+    "hours": 20,
+    "summary": "Master modern Python 3.12+, asynchronous concurrency, vector computing with NumPy, PyTorch tensor manipulation, and clean architectural design patterns for AI systems.",
+    "skills": [
+      "Python 3.12+ (Type Hinting, Generics)",
+      "Asyncio & Concurrent Futures",
+      "NumPy Vectorization & Broadcasting",
+      "PyTorch Tensor Internals & Autograd",
+      "Pydantic v2 & Fast Serialization"
+    ],
+    "project": {
+      "id": "proj-mod-01",
+      "title": "Mini-Project: High-Throughput Async LLM Stream Dispatcher & Batcher",
+      "summary": "Build a resilient, non-blocking asynchronous pipeline using asyncio.Queue, TaskGroup, and Pydantic v2 that handles 200+ concurrent LLM streaming requests with sliding-window rate limiting.",
+      "deliverables": [
+        "Implement an AsyncLLMDispatcher queue handling concurrent stream requests",
+        "Enforce token bucket rate limiting preventing provider rate-limit errors",
+        "Validate and parse incoming payloads using strict Pydantic v2 schemas",
+        "Write async unit tests benchmarking throughput and memory efficiency"
+      ]
+    },
+    "videos": [
+      {
+        "id": "py-01",
+        "title": "Python Asynchronous Programming (Asyncio Complete Tutorial)",
+        "instructor": "ArjanCodes",
+        "channel": "ArjanCodes",
+        "youtube_id": "2IW-ZEui4h4",
+        "url": "https://www.youtube.com/watch?v=2IW-ZEui4h4",
+        "duration": "45m",
+        "description": "Deep dive into async/await, event loops, tasks, and non-blocking IO critical for high-throughput LLM streaming and API routing.",
+        "checkpoints": [
+          "Understand Python event loop internals and task scheduling",
+          "Implement async context managers and async iterators",
+          "Handle concurrent LLM streaming requests with asyncio.gather and TaskGroup"
+        ]
+      },
+      {
+        "id": "py-02",
+        "title": "NumPy Full Course: Vectorized Computing & Memory Layout",
+        "instructor": "Keith Galli",
+        "channel": "freeCodeCamp.org",
+        "youtube_id": "QUT1VHiLmmI",
+        "url": "https://www.youtube.com/watch?v=QUT1VHiLmmI",
+        "duration": "1h 00m",
+        "description": "Comprehensive tutorial covering multidimensional array manipulation, broadcasting rules, indexing tricks, and vectorized math without Python loops.",
+        "checkpoints": [
+          "Master array shape, stride, and contiguous C vs Fortran memory layout",
+          "Implement multi-axis tensor broadcasting for batch calculations",
+          "Compute dot products, matrix multiplications, and cosine similarity from scratch"
+        ]
+      },
+      {
+        "id": "py-03",
+        "title": "PyTorch for Deep Learning & Tensor Operations Bootcamp",
+        "instructor": "Daniel Bourke",
+        "channel": "freeCodeCamp.org",
+        "youtube_id": "V_xro1bcAuA",
+        "url": "https://www.youtube.com/watch?v=V_xro1bcAuA",
+        "duration": "25h 00m",
+        "description": "Zero to mastery in PyTorch: tensor creation, CUDA device placement, automatic differentiation (autograd), neural network modules, and data loaders.",
+        "checkpoints": [
+          "Perform tensor operations across CPU and CUDA device hardware",
+          "Understand torch.autograd dynamic computational graphs and backward passes",
+          "Build custom torch.nn.Module layers, losses, and optimization loops"
+        ]
+      },
+      {
+        "id": "py-04",
+        "title": "Pydantic V2 Deep Dive: Data Validation and Structured Outputs",
+        "instructor": "Dave Ebbelaar",
+        "channel": "Dave Ebbelaar",
+        "youtube_id": "Vj-QUss3o0Y",
+        "url": "https://www.youtube.com/watch?v=Vj-QUss3o0Y",
+        "duration": "40m",
+        "description": "Mastering Pydantic v2 rust-powered validation for LLM structured outputs, JSON schema generation, and strict typing.",
+        "checkpoints": [
+          "Define nested Pydantic models with field validators and custom types",
+          "Generate OpenAI and Anthropic compatible JSON schemas",
+          "Parse and enforce deterministic structured outputs from LLM responses"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "02-mathematics",
+    "number": "02",
+    "title": "Mathematics for Machine Learning",
+    "badge": "Foundations",
+    "icon": "fa-solid fa-square-root-variable",
+    "hours": 24,
+    "summary": "Develop deep geometric intuition for linear algebra, vector spaces, eigenvalues, multivariable calculus, gradient descent, probability distributions, and information theory.",
+    "skills": [
+      "Vector Spaces & Linear Transformations",
+      "Eigenvalues, Eigenvectors & SVD",
+      "Multivariable Calculus & Partial Derivatives",
+      "Gradient Descent & Optimization Landscapes",
+      "Probability Distributions & Cross-Entropy"
+    ],
+    "project": {
+      "id": "proj-mod-02",
+      "title": "Mini-Project: 2D Geometric Transformation & PCA Engine from Scratch",
+      "summary": "Implement geometric coordinate projections, matrix transformations, covariance matrix calculations, power iteration for eigenvalues/eigenvectors, and dimensionality reduction in pure NumPy without Scikit-Learn.",
+      "deliverables": [
+        "Implement 2D and 3D affine transformation matrices (rotation, scaling, shear)",
+        "Calculate sample covariance matrices and implement power iteration for principal eigenvalues",
+        "Project high-dimensional embedding vectors into 2D principal component space",
+        "Verify mathematical equivalence against standard SVD formulations"
+      ]
+    },
+    "videos": [
+      {
+        "id": "math-01",
+        "title": "Essence of Linear Algebra: Full Masterclass Series",
+        "instructor": "Grant Sanderson",
+        "channel": "3Blue1Brown",
+        "youtube_id": "fNk_zzaMoSs",
+        "url": "https://www.youtube.com/watch?v=fNk_zzaMoSs&list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab",
+        "duration": "3h 15m",
+        "description": "Visual, intuitive understanding of vectors, linear combinations, dot products, cross products, determinants, matrix multiplication as transformations, and change of basis.",
+        "checkpoints": [
+          "Visualize matrices as geometric transformations of coordinate space",
+          "Compute determinants and understand their volume-scaling intuition",
+          "Derive eigenvalues and eigenvectors and their role in dimensionality reduction"
+        ]
+      },
+      {
+        "id": "math-02",
+        "title": "Essence of Calculus: Derivatives, Chain Rule & Integrals",
+        "instructor": "Grant Sanderson",
+        "channel": "3Blue1Brown",
+        "youtube_id": "WUvTyaaNkzM",
+        "url": "https://www.youtube.com/watch?v=WUvTyaaNkzM&list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr",
+        "duration": "3h 30m",
+        "description": "Fundamental theorems of calculus, derivative intuition, chain rule for nested functions (the engine of backpropagation), and multivariate optimization.",
+        "checkpoints": [
+          "Grasp the geometric intuition of derivatives as local linear approximations",
+          "Master multivariable chain rule for forward/backward computational graphs",
+          "Calculate gradients and directional derivatives across loss surfaces"
+        ]
+      },
+      {
+        "id": "math-03",
+        "title": "StatQuest: Probability, Likelihood & Cross-Entropy",
+        "instructor": "Josh Starmer",
+        "channel": "StatQuest with Josh Starmer",
+        "youtube_id": "p_xNWuSy5c8",
+        "url": "https://www.youtube.com/watch?v=p_xNWuSy5c8",
+        "duration": "1h 45m",
+        "description": "Clear step-by-step breakdowns of probability density functions, maximum likelihood estimation (MLE), Bayes theorem, Shannon entropy, and cross-entropy loss.",
+        "checkpoints": [
+          "Distinguish probability from likelihood in statistical estimation",
+          "Understand Shannon entropy, KL divergence, and cross-entropy loss",
+          "Compute Softmax activation and cross-entropy gradients analytically"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "03-machine-learning",
+    "number": "03",
+    "title": "Classical Machine Learning",
+    "badge": "Core ML",
+    "icon": "fa-solid fa-chart-line",
+    "hours": 22,
+    "summary": "Implement and evaluate classical supervised and unsupervised algorithms, understand bias-variance tradeoff, regularization, decision trees, ensemble methods, and clustering.",
+    "skills": [
+      "Linear & Logistic Regression",
+      "Support Vector Machines (SVM)",
+      "Decision Trees, Random Forests & XGBoost",
+      "K-Means & DBSCAN Clustering",
+      "Scikit-Learn Production Pipelines"
+    ],
+    "project": {
+      "id": "proj-mod-03",
+      "title": "Mini-Project: Production Scikit-Learn Predictive Pipeline with Artifact Serialization",
+      "summary": "Construct a production machine learning pipeline with automated missing data imputation, categorical one-hot encoding, feature scaling, XGBoost classification, cross-validated hyperparameter tuning, and export to ONNX format.",
+      "deliverables": [
+        "Build unified ColumnTransformer pipeline preventing data leakage across train/test splits",
+        "Perform stratified k-fold cross-validation and optimize F1-score with hyperparameter search",
+        "Analyze feature importance and SHAP values for model explainability",
+        "Serialize pipeline to ONNX and Joblib formats with deterministic inference verification"
+      ]
+    },
+    "videos": [
+      {
+        "id": "ml-01",
+        "title": "Machine Learning Specialization: Supervised Learning",
+        "instructor": "Andrew Ng",
+        "channel": "DeepLearning.AI",
+        "youtube_id": "jGwO_UgTS7I",
+        "url": "https://www.youtube.com/watch?v=jGwO_UgTS7I",
+        "duration": "8h 00m",
+        "description": "Andrew Ng's seminal foundational curriculum covering linear regression, cost functions, gradient descent, feature scaling, and logistic regression classification.",
+        "checkpoints": [
+          "Formulate mean squared error (MSE) and binary cross-entropy cost functions",
+          "Implement batch and mini-batch gradient descent with learning rate tuning",
+          "Apply L1 (Lasso) and L2 (Ridge) regularization to prevent overfitting"
+        ]
+      },
+      {
+        "id": "ml-02",
+        "title": "StatQuest: Random Forests and XGBoost Step-by-Step",
+        "instructor": "Josh Starmer",
+        "channel": "StatQuest with Josh Starmer",
+        "youtube_id": "J4Wdy0Wc_xQ",
+        "url": "https://www.youtube.com/watch?v=J4Wdy0Wc_xQ",
+        "duration": "1h 30m",
+        "description": "Clear step-by-step breakdown of how decision trees split on Gini impurity, how bagging builds Random Forests, and how boosting sequentially minimizes residuals with XGBoost.",
+        "checkpoints": [
+          "Understand decision tree splitting, tree depth, and pruning strategies",
+          "Implement bagging and out-of-bag validation with Random Forests",
+          "Explain gradient boosted trees and tune learning rates, tree depth, and subsampling"
+        ]
+      },
+      {
+        "id": "ml-03",
+        "title": "Scikit-Learn Production Machine Learning Pipeline",
+        "instructor": "Alex Freberg",
+        "channel": "Alex The Analyst",
+        "youtube_id": "7eh4d6sabA0",
+        "url": "https://www.youtube.com/watch?v=7eh4d6sabA0",
+        "duration": "1h 15m",
+        "description": "Building reproducible end-to-end data pipelines with ColumnTransformer, imputer strategies, standard scalers, model cross-validation, and hyperparameter grid search.",
+        "checkpoints": [
+          "Build unified pipelines preventing data leakage across train/validation splits",
+          "Execute k-fold stratified cross validation and analyze ROC-AUC curves",
+          "Export model artifacts and inference schemas using joblib and ONNX"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "04-deep-learning",
+    "number": "04",
+    "title": "Deep Learning & Neural Networks",
+    "badge": "Neural Nets",
+    "icon": "fa-solid fa-network-wired",
+    "hours": 28,
+    "summary": "Build neural networks from scratch in raw Python, dissect backpropagation step-by-step, build micrograd and makemore with Andrej Karpathy, and master CNNs.",
+    "skills": [
+      "Manual Backpropagation & Autograd",
+      "Multi-Layer Perceptrons (MLP)",
+      "Batch Normalization & Layer Normalization",
+      "Convolutional Neural Networks (CNNs)",
+      "Loss Landscapes & Optimizers (AdamW, SGD)"
+    ],
+    "project": {
+      "id": "proj-mod-04",
+      "title": "Mini-Project: Micro-PyTorch: Custom Autograd Scalar Engine & 2-Layer MLP",
+      "summary": "Construct a scalar-valued automatic differentiation engine supporting dynamic computational graphs, backward gradient passes for basic arithmetic and activations, and train an MLP to classify the non-linear two moons dataset.",
+      "deliverables": [
+        "Implement a Value class with parent DAG tracking and backward gradient closures",
+        "Support operators: +, *, -, /, tanh, relu, pow, and exp",
+        "Build Neuron, Layer, and MLP modules with zero_grad() and parameters() helpers",
+        "Train on non-linear synthetic dataset and plot decision boundary convergence"
+      ]
+    },
+    "videos": [
+      {
+        "id": "dl-01",
+        "title": "The Spelled-Out Intro to Neural Networks and Backpropagation: Building Micrograd",
+        "instructor": "Andrej Karpathy",
+        "channel": "Andrej Karpathy",
+        "youtube_id": "VMj-3S1tku0",
+        "url": "https://www.youtube.com/watch?v=VMj-3S1tku0",
+        "duration": "2h 25m",
+        "description": "The gold standard deep learning tutorial. Building a scalar-valued autograd engine (micrograd) and neural network from pure scratch in Python.",
+        "checkpoints": [
+          "Implement a Value class tracking children operations and gradients",
+          "Manually derive backward methods for +, *, tanh, relu, and pow",
+          "Train an MLP on a toy dataset and inspect computed gradients"
+        ]
+      },
+      {
+        "id": "dl-02",
+        "title": "Building Makemore Part 1: Bigram Language Model",
+        "instructor": "Andrej Karpathy",
+        "channel": "Andrej Karpathy",
+        "youtube_id": "PaCmpygFfXo",
+        "url": "https://www.youtube.com/watch?v=PaCmpygFfXo",
+        "duration": "1h 55m",
+        "description": "Introduction to autoregressive character-level language modeling: counting bigrams, probability lookup matrices, sampling, and negative log-likelihood loss.",
+        "checkpoints": [
+          "Construct character tokenization vocabulary and lookup index mapping",
+          "Compute transition probability matrices with smoothing",
+          "Train a single-layer linear neural network using cross-entropy loss"
+        ]
+      },
+      {
+        "id": "dl-03",
+        "title": "Building Makemore Part 2 & 3: MLP, Activations & Batch Normalization",
+        "instructor": "Andrej Karpathy",
+        "channel": "Andrej Karpathy",
+        "youtube_id": "TCH_1BHYA8I",
+        "url": "https://www.youtube.com/watch?v=TCH_1BHYA8I",
+        "duration": "2h 15m",
+        "description": "Bengio et al. 2003 neural language model implementation, embedding tables, vanishing/exploding gradients, weight initialization, and batch normalization internals.",
+        "checkpoints": [
+          "Implement multi-dimensional token embedding lookups",
+          "Analyze activation distributions, dead ReLUs, and Kaiming initialization",
+          "Build manual BatchNorm layer tracking running mean and variance"
+        ]
+      },
+      {
+        "id": "dl-04",
+        "title": "MIT 6.S191: Introduction to Deep Learning",
+        "instructor": "Alexander Amini",
+        "channel": "Alexander Amini",
+        "youtube_id": "QDX-1M5NjAQ",
+        "url": "https://www.youtube.com/watch?v=QDX-1M5NjAQ",
+        "duration": "55m",
+        "description": "MIT's flagship course lecture on neural network foundations, perceptron mathematics, loss surfaces, and gradient descent optimization dynamics.",
+        "checkpoints": [
+          "Understand geometric interpretation of non-linear decision boundaries",
+          "Analyze momentum, RMSProp, and Adam optimization algorithms",
+          "Evaluate regularization methods including dropout and weight decay"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "05-transformers",
+    "number": "05",
+    "title": "Transformers & Attention Mechanisms",
+    "badge": "Architecture",
+    "icon": "fa-solid fa-microchip",
+    "hours": 30,
+    "summary": "Build the Transformer architecture from scratch: Scaled Dot-Product Attention, Multi-Head Attention, RoPE positional encodings, FlashAttention, and decoder-only GPT models.",
+    "skills": [
+      "Self-Attention & Scaled Dot-Product",
+      "Multi-Head Attention (MHA/MQA/GQA)",
+      "Positional Encodings (Learned, Sinusoidal, RoPE)",
+      "Transformer Decoder Blocks & Residual Streams",
+      "KV Caching & FlashAttention"
+    ],
+    "project": {
+      "id": "proj-mod-05",
+      "title": "Mini-Project: Mini-GPT: Causal Multi-Head Attention & Decoder Model",
+      "summary": "Implement a modular Transformer decoder in PyTorch from scratch, featuring scaled dot-product attention with causal triangular masks, Rotary Positional Embeddings (RoPE), and train on a domain text dataset to generate coherent text.",
+      "deliverables": [
+        "Implement MultiHeadAttention layer with dynamic batching and causal triangular mask",
+        "Code Rotary Positional Embedding (RoPE) tensor rotation helpers",
+        "Assemble TransformerBlock with Pre-LayerNorm and MLP projection layers",
+        "Train on a text corpus and implement temperature and top-k autoregressive sampling"
+      ]
+    },
+    "videos": [
+      {
+        "id": "trans-01",
+        "title": "Let's Build GPT: from scratch, in code, spelled out",
+        "instructor": "Andrej Karpathy",
+        "channel": "Andrej Karpathy",
+        "youtube_id": "kCc8FmEb1nY",
+        "url": "https://www.youtube.com/watch?v=kCc8FmEb1nY",
+        "duration": "1h 56m",
+        "description": "Build a Generative Pretrained Transformer (GPT) from scratch in PyTorch following the 'Attention Is All You Need' paper and nanoGPT design.",
+        "checkpoints": [
+          "Code scaled dot-product self-attention with causal triangular masking",
+          "Assemble Multi-Head Attention, Feed-Forward MLP, and Pre-LN blocks",
+          "Train a mini GPT model on Shakespeare and generate novel text autoregressively"
+        ]
+      },
+      {
+        "id": "trans-02",
+        "title": "Attention Is All You Need (Transformer) Code Walkthrough",
+        "instructor": "Umar Jamil",
+        "channel": "Umar Jamil",
+        "youtube_id": "ISNdQcPhsts",
+        "url": "https://www.youtube.com/watch?v=ISNdQcPhsts",
+        "duration": "2h 15m",
+        "description": "Line-by-line PyTorch implementation of the entire Transformer paper: encoder, decoder, positional embeddings, cross-attention, and projection layer.",
+        "checkpoints": [
+          "Implement query, key, value projections and tensor reshapes for heads",
+          "Understand encoder-decoder cross-attention dynamics",
+          "Build training loop with teacher forcing and padding masks"
+        ]
+      },
+      {
+        "id": "trans-03",
+        "title": "Rotary Positional Embeddings (RoPE) Explained with Code",
+        "instructor": "Umar Jamil",
+        "channel": "Umar Jamil",
+        "youtube_id": "o29P0Kp43UM",
+        "url": "https://www.youtube.com/watch?v=o29P0Kp43UM",
+        "duration": "45m",
+        "description": "Deep mathematical and code walkthrough of Rotary Positional Embeddings (RoPE) used in LLaMA 3, Mistral, and modern state-of-the-art LLMs.",
+        "checkpoints": [
+          "Understand complex number rotations in 2D coordinate pairs",
+          "Implement RoPE frequency tensors and apply them to Q and K tensors",
+          "Explain why RoPE preserves relative distances and enables context extension"
+        ]
+      },
+      {
+        "id": "trans-04",
+        "title": "Visualizing Attention and Transformers",
+        "instructor": "Grant Sanderson",
+        "channel": "3Blue1Brown",
+        "youtube_id": "eMlx5fFNoYc",
+        "url": "https://www.youtube.com/watch?v=eMlx5fFNoYc",
+        "duration": "30m",
+        "description": "Superb 3D geometric animations explaining how words transform into high-dimensional vectors, how queries and keys align, and how context transfers.",
+        "checkpoints": [
+          "Visualize high-dimensional semantic vector spaces",
+          "Understand how attention matrices route information across token sequences",
+          "Grasp the role of the residual stream as the central information highway"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "06-llm-engineering",
+    "number": "06",
+    "title": "LLM Engineering & Application Architecture",
+    "badge": "Core LLM",
+    "icon": "fa-solid fa-brain",
+    "hours": 25,
+    "summary": "Master prompt engineering techniques, structured outputs with Pydantic and Instructor, function calling, streaming APIs, reproducing GPT-2 with Karpathy, and tokenizer internals.",
+    "skills": [
+      "Byte-Pair Encoding (BPE) Tokenization",
+      "Reproducing GPT-2 (124M)",
+      "Structured Outputs & Function Calling",
+      "Prompt Engineering (CoT, ReAct, Few-Shot)",
+      "Token Management & Cost Optimization"
+    ],
+    "project": {
+      "id": "proj-mod-06",
+      "title": "Mini-Project: Type-Safe Structured Extractor with Self-Healing Feedback Loop",
+      "summary": "Develop a production data extraction engine using Instructor and Pydantic v2 that extracts highly nested financial/invoice records from raw text, validates complex invariants, and automatically feeds schema errors back to the model for self-correction.",
+      "deliverables": [
+        "Define deeply nested Pydantic schemas with custom field cross-validators",
+        "Implement automatic reflection retry loop correcting invalid JSON outputs",
+        "Support multi-provider switching (OpenAI, Anthropic, Ollama local)",
+        "Add token cost accounting and latency telemetry per extraction run"
+      ]
+    },
+    "videos": [
+      {
+        "id": "llm-01",
+        "title": "Let's Reproduce GPT-2 (124M): From Scratch in PyTorch",
+        "instructor": "Andrej Karpathy",
+        "channel": "Andrej Karpathy",
+        "youtube_id": "l8pRSuU81PU",
+        "url": "https://www.youtube.com/watch?v=l8pRSuU81PU",
+        "duration": "4h 15m",
+        "description": "Complete 4-hour masterclass reproducing GPT-2 (124M) weights, architecture, FlashAttention optimization, cosine learning schedule, distributed DDP training, and validation.",
+        "checkpoints": [
+          "Load HuggingFace GPT-2 weights into a clean custom PyTorch model",
+          "Benchmark speedups with torch.compile, FlashAttention, and Tensor Cores",
+          "Train on the FineWeb-Edu dataset achieving state-of-the-art validation loss"
+        ]
+      },
+      {
+        "id": "llm-02",
+        "title": "Intro to Large Language Models: Technical Overview",
+        "instructor": "Andrej Karpathy",
+        "channel": "Andrej Karpathy",
+        "youtube_id": "zjkBMFhNj_g",
+        "url": "https://www.youtube.com/watch?v=zjkBMFhNj_g",
+        "duration": "1h 00m",
+        "description": "Comprehensive 1-hour overview of LLM pretraining, tokenization, fine-tuning (RLHF/DPO), tool use, multimodal extensions, and security jailbreaks.",
+        "checkpoints": [
+          "Distinguish Base Models from Instruction-Tuned and Thinking Models",
+          "Understand the full data curation, pre-training, and alignment pipeline",
+          "Analyze LLM limitations: hallucinations, context windows, and safety vectors"
+        ]
+      },
+      {
+        "id": "llm-03",
+        "title": "Structured Outputs and Function Calling with Instructor",
+        "instructor": "Jason Liu",
+        "channel": "Weights & Biases",
+        "youtube_id": "yj-wSRJwrrc",
+        "url": "https://www.youtube.com/watch?v=yj-wSRJwrrc",
+        "duration": "50m",
+        "description": "How to extract 100% deterministic, type-safe data from LLMs using Pydantic, Instructor, and OpenAI/Anthropic tool calling APIs with automatic retry loops.",
+        "checkpoints": [
+          "Configure Instructor with OpenAI, Anthropic, and open-source models",
+          "Implement multi-stage schema validation with custom Pydantic validators",
+          "Handle validation errors with self-correcting LLM feedback prompts"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "07-rag",
+    "number": "07",
+    "title": "Retrieval Augmented Generation (RAG)",
+    "badge": "Search & Memory",
+    "icon": "fa-solid fa-database",
+    "hours": 26,
+    "summary": "Build production-grade RAG systems: chunking strategies, dense embeddings, vector databases (PGVector, Qdrant), hybrid search with BM25, and neural rerankers (Cohere).",
+    "skills": [
+      "Document Parsing & Semantic Chunking",
+      "Dense Embeddings & Vector Search",
+      "Hybrid Search (Dense + BM25 Sparse)",
+      "Neural Reranking (Cross-Encoders, Cohere)",
+      "Context Compression & HyDE"
+    ],
+    "project": {
+      "id": "proj-mod-07",
+      "title": "Mini-Project: Hybrid RAG Engine with Reciprocal Rank Fusion & Neural Reranker",
+      "summary": "Build a technical documentation search and synthesis engine combining BM25 keyword matching with PGVector HNSW dense embeddings, fused via Reciprocal Rank Fusion (RRF) and reranked using a cross-encoder model.",
+      "deliverables": [
+        "Implement semantic sliding-window chunking preserving Markdown headers and code blocks",
+        "Deploy PostgreSQL with pgvector extension and build HNSW index",
+        "Implement Reciprocal Rank Fusion (RRF) algorithm combining dense and sparse candidate lists",
+        "Integrate cross-encoder neural reranker and format cited source references"
+      ]
+    },
+    "videos": [
+      {
+        "id": "rag-01",
+        "title": "RAG From Scratch: Complete Architecture Masterclass",
+        "instructor": "Lance Martin & Harrison Chase",
+        "channel": "LangChain",
+        "youtube_id": "wd7TZ4w1mSw",
+        "url": "https://www.youtube.com/watch?v=wd7TZ4w1mSw",
+        "duration": "2h 30m",
+        "description": "Complete ground-up RAG architecture series: query translation (Multi-query, RAG-fusion, Decomposition), routing, indexing, retrieval, and synthesis.",
+        "checkpoints": [
+          "Implement semantic document chunking with metadata preservation",
+          "Index document vectors in vector stores with cosine & dot-product distance",
+          "Execute query decomposition, HyDE (Hypothetical Document Embeddings), and routing"
+        ]
+      },
+      {
+        "id": "rag-02",
+        "title": "Advanced RAG: Hybrid Search and Re-Ranking Explained",
+        "instructor": "James Briggs",
+        "channel": "James Briggs",
+        "youtube_id": "kl6NYuhkvbk",
+        "url": "https://www.youtube.com/watch?v=kl6NYuhkvbk",
+        "duration": "45m",
+        "description": "Overcoming vector search failures with Reciprocal Rank Fusion (RRF), BM25 keyword matching, and cross-encoder neural rerankers.",
+        "checkpoints": [
+          "Combine BM25 sparse keyword scores with dense vector similarity via RRF",
+          "Integrate Cohere or BGE cross-encoder rerankers on top-k candidates",
+          "Benchmark precision@k and recall@k improvements on technical queries"
+        ]
+      },
+      {
+        "id": "rag-03",
+        "title": "PostgreSQL Vector Search with PGVector and Supabase",
+        "instructor": "Greg Richardson",
+        "channel": "Supabase",
+        "youtube_id": "Yhtjd7yGGGA",
+        "url": "https://www.youtube.com/watch?v=Yhtjd7yGGGA",
+        "duration": "35m",
+        "description": "Implementing production vector search inside relational PostgreSQL using the pgvector extension, HNSW indexing, and IVFFlat indices.",
+        "checkpoints": [
+          "Install and configure pgvector extension in PostgreSQL / Supabase",
+          "Build HNSW (Hierarchical Navigable Small World) indexes for sub-10ms search",
+          "Write SQL functions performing hybrid vector and relational metadata filtering"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "08-ai-agents",
+    "number": "08",
+    "title": "AI Agents & Autonomous Workflows",
+    "badge": "Agentic Systems",
+    "icon": "fa-solid fa-robot",
+    "hours": 30,
+    "summary": "Design stateful multi-agent systems using LangGraph, ReAct loops, deterministic state machines, human-in-the-loop approvals, and parallel agent swarms.",
+    "skills": [
+      "ReAct (Reasoning + Acting) Loops",
+      "LangGraph Stateful Execution Graphs",
+      "Multi-Agent Coordination & Swarms",
+      "Human-in-the-Loop & Time Travel State",
+      "Dynamic Tool Calling & Sandboxed Execution"
+    ],
+    "project": {
+      "id": "proj-mod-08",
+      "title": "Mini-Project: Multi-Agent Automated Code Review & Repair Swarm in LangGraph",
+      "summary": "Construct a cyclical stateful agent workflow in LangGraph where a Tester Agent runs test suites against Python modules, a Diagnostician Agent analyzes stack traces, and a Coder Agent patches code iteratively until all tests pass.",
+      "deliverables": [
+        "Define shared agent State schema tracking execution history, diffs, and test reports",
+        "Build cyclical graph nodes for TestRunner, Diagnostician, and CodePatcher",
+        "Add human-in-the-loop breakpoint before git commit / code overwrite operations",
+        "Implement persistent checkpointing to SQLite allowing execution replay and rewind"
+      ]
+    },
+    "videos": [
+      {
+        "id": "agent-01",
+        "title": "LangGraph Tutorial: Building State-of-the-Art Multi-Agent Systems",
+        "instructor": "Harrison Chase",
+        "channel": "LangChain",
+        "youtube_id": "PqS1kIb74zU",
+        "url": "https://www.youtube.com/watch?v=PqS1kIb74zU",
+        "duration": "1h 40m",
+        "description": "Architecting cyclical, stateful AI workflows with LangGraph: graph nodes, edges, conditional routing, shared state schemas, and checkpointing.",
+        "checkpoints": [
+          "Define typed state schemas using TypedDict and Pydantic",
+          "Build cyclic graphs with conditional routing edges and tool nodes",
+          "Implement persistence checkpoints allowing rewind and time-travel debugging"
+        ]
+      },
+      {
+        "id": "agent-02",
+        "title": "Agentic Design Patterns: What Every AI Engineer Needs to Know",
+        "instructor": "Andrew Ng",
+        "channel": "Sequoia Capital",
+        "youtube_id": "sal78ACtGTc",
+        "url": "https://www.youtube.com/watch?v=sal78ACtGTc",
+        "duration": "40m",
+        "description": "Andrew Ng details the 4 fundamental agentic design patterns that outperform zero-shot prompting: Reflection, Tool Use, Planning, and Multi-Agent Collaboration.",
+        "checkpoints": [
+          "Implement self-reflection and iterative critique loops",
+          "Build multi-step plan-and-solve execution workflows",
+          "Coordinate specialized agent personas (Researcher, Coder, Reviewer)"
+        ]
+      },
+      {
+        "id": "agent-03",
+        "title": "Build a Research Multi-Agent Team from Scratch",
+        "instructor": "David Ondrej",
+        "channel": "David Ondrej",
+        "youtube_id": "b-P4z3qF_K0",
+        "url": "https://www.youtube.com/watch?v=b-P4z3qF_K0",
+        "duration": "50m",
+        "description": "Step-by-step code tutorial building a team of autonomous agents that browse the web, aggregate sources, cross-verify data, and write executive reports.",
+        "checkpoints": [
+          "Equip agents with web browsing and document extraction tools",
+          "Implement inter-agent message passing and validation handoffs",
+          "Generate structured output reports with source attribution"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "09-mcp",
+    "number": "09",
+    "title": "Model Context Protocol (MCP)",
+    "badge": "Standard Protocol",
+    "icon": "fa-solid fa-plug",
+    "hours": 20,
+    "summary": "Master Anthropic's Model Context Protocol (MCP) to standardize how AI models securely connect to enterprise data sources, local desktop tools, databases, and APIs.",
+    "skills": [
+      "MCP Client-Server Architecture",
+      "Standard Transports (stdio, SSE)",
+      "Tools, Resources & Prompts Primitives",
+      "Building MCP Servers (TypeScript & Python)",
+      "Connecting MCP to Cursor, Claude & Custom Agents"
+    ],
+    "project": {
+      "id": "proj-mod-09",
+      "title": "Mini-Project: Production SQLite & Host Metrics FastMCP Server for Claude Desktop",
+      "summary": "Build a production-ready FastMCP server in Python exposing sandboxed SQL querying, file system diffing, and host CPU/RAM diagnostic tools, connected and verified live in Claude Desktop and Cursor.",
+      "deliverables": [
+        "Implement FastMCP server with typed parameters, descriptions, and error handling",
+        "Expose MCP Resources for database schemas and system metric telemetry logs",
+        "Define parameterized Prompts for automated performance diagnostic reviews",
+        "Configure claude_desktop_config.json and verify end-to-end tool execution"
+      ]
+    },
+    "videos": [
+      {
+        "id": "mcp-01",
+        "title": "Introduction to Model Context Protocol (MCP): Architecture & Concepts",
+        "instructor": "Anthropic Engineering",
+        "channel": "Anthropic",
+        "youtube_id": "rbtQ_E5L68A",
+        "url": "https://www.youtube.com/watch?v=rbtQ_E5L68A",
+        "duration": "45m",
+        "description": "Anthropic's official technical introduction to the Model Context Protocol, explaining the universal open standard connecting AI models to context and tools.",
+        "checkpoints": [
+          "Understand MCP client, host, and server roles and responsibilities",
+          "Explain stdio (local process) vs SSE (Server-Sent Events) network transports",
+          "Define the three core MCP primitives: Resources, Tools, and Prompts"
+        ]
+      },
+      {
+        "id": "mcp-02",
+        "title": "Build Your First MCP Server in Python with FastMCP",
+        "instructor": "Alex Albert",
+        "channel": "Anthropic Developers",
+        "youtube_id": "9h4Q3x4k9E8",
+        "url": "https://www.youtube.com/watch?v=9h4Q3x4k9E8",
+        "duration": "35m",
+        "description": "Hands-on guide to building a production Python MCP server using the FastMCP framework, exposing database queries, file systems, and API endpoints.",
+        "checkpoints": [
+          "Install the Python MCP SDK and initialize a FastMCP server instance",
+          "Expose typed tools with Pydantic parameter schemas and docstrings",
+          "Publish dynamic resources and prompt templates for client consumers"
+        ]
+      },
+      {
+        "id": "mcp-03",
+        "title": "Connecting MCP to Production Agent Workflows & Desktop Tools",
+        "instructor": "IndyDevDan",
+        "channel": "IndyDevDan",
+        "youtube_id": "9gq6yWlYn0A",
+        "url": "https://www.youtube.com/watch?v=9gq6yWlYn0A",
+        "duration": "40m",
+        "description": "Practical implementation connecting custom MCP servers to Claude Desktop, Cursor IDE, and custom LangGraph / LangChain Python agents.",
+        "checkpoints": [
+          "Configure claude_desktop_config.json with custom MCP servers",
+          "Build a custom client adapter in Python consuming MCP stdio servers",
+          "Execute secured tool invocations with strict permission sandboxing"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "10-evaluation",
+    "number": "10",
+    "title": "Evaluation, Testing & Observability",
+    "badge": "Reliability",
+    "icon": "fa-solid fa-vial-circle-check",
+    "hours": 18,
+    "summary": "Implement systematic evaluation for LLMs and RAG: RAG Triad (Faithfulness, Relevance, Recall), Ragas, Promptfoo automated CI/CD testing, and LangSmith tracing.",
+    "skills": [
+      "RAG Triad & RAGAS Metric Framework",
+      "Automated Prompt Evaluation in CI/CD (Promptfoo)",
+      "LLM-as-a-Judge Design & Calibration",
+      "Tracing & Observability (LangSmith, Phoenix)",
+      "Red-Teaming & Benchmark Datasets"
+    ],
+    "project": {
+      "id": "proj-mod-10",
+      "title": "Mini-Project: Automated RAG Quality Gate in CI/CD with Ragas & Promptfoo",
+      "summary": "Establish an automated quality-assurance gate for a RAG application: generate synthetic golden question-answer pairs, compute Ragas faithfulness/relevance scores, and fail CI/CD builds if regressions occur.",
+      "deliverables": [
+        "Synthesize a benchmark evaluation dataset of 50 technical query-context pairs",
+        "Compute automated Ragas metrics: Faithfulness, Answer Relevance, and Context Precision",
+        "Configure Promptfoo test matrix evaluating prompt variations against target models",
+        "Integrate GitHub Actions workflow enforcing minimum quality score thresholds"
+      ]
+    },
+    "videos": [
+      {
+        "id": "eval-01",
+        "title": "Evaluating RAG Applications: The RAG Triad and Ragas",
+        "instructor": "Aparna Dhinakaran",
+        "channel": "Arize AI",
+        "youtube_id": "2KkU_wA5m9A",
+        "url": "https://www.youtube.com/watch?v=2KkU_wA5m9A",
+        "duration": "45m",
+        "description": "How to measure and debug RAG pipelines using Context Relevance, Groundedness (Faithfulness), and Answer Relevance with automated evaluation metrics.",
+        "checkpoints": [
+          "Understand the RAG Triad failure modes and diagnostic metrics",
+          "Generate synthetic golden test datasets from production documents",
+          "Compute RAGAS scores (Faithfulness, Answer Relevance, Context Recall)"
+        ]
+      },
+      {
+        "id": "eval-02",
+        "title": "Automated Testing for LLMs with Promptfoo in GitHub Actions",
+        "instructor": "Ian Webster",
+        "channel": "Promptfoo",
+        "youtube_id": "8P2g0k7l1wA",
+        "url": "https://www.youtube.com/watch?v=8P2g0k7l1wA",
+        "duration": "35m",
+        "description": "Setting up deterministic regression testing, hallucination checks, and red-teaming test suites for prompt and model changes in CI/CD pipelines.",
+        "checkpoints": [
+          "Configure promptfoo.yaml test matrix with assertions (similarity, contains, js)",
+          "Run automated regression tests detecting prompt degradation",
+          "Integrate test suites into GitHub Actions PR verification checks"
+        ]
+      },
+      {
+        "id": "eval-03",
+        "title": "LLM Observability and Tracing with LangSmith",
+        "instructor": "Harrison Chase",
+        "channel": "LangChain",
+        "youtube_id": "Qn0_9k0pP9M",
+        "url": "https://www.youtube.com/watch?v=Qn0_9k0pP9M",
+        "duration": "40m",
+        "description": "Deep tracing of multi-turn agent runs, latency bottlenecks, token consumption, intermediate tool outputs, and user feedback tagging in production.",
+        "checkpoints": [
+          "Instrument Python applications with LangSmith / OpenTelemetry tracing",
+          "Inspect execution trees, latency profiles, and token costs per step",
+          "Collect user feedback and tag edge cases for evaluation test suites"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "11-inference",
+    "number": "11",
+    "title": "High-Throughput Inference & Model Serving",
+    "badge": "Performance",
+    "icon": "fa-solid fa-gauge-high",
+    "hours": 24,
+    "summary": "Deploy high-throughput, low-latency LLM serving engines: vLLM, PagedAttention, KV-cache management, continuous batching, quantization (GGUF, AWQ), and FastAPI gateways.",
+    "skills": [
+      "vLLM Engine & PagedAttention",
+      "Continuous Batching & Speculative Decoding",
+      "Quantization (GGUF, AWQ, GPTQ, BitsAndBytes)",
+      "FastAPI High-Throughput Streaming Gateways",
+      "Ollama & Local Model Deployment"
+    ],
+    "project": {
+      "id": "proj-mod-11",
+      "title": "Mini-Project: High-Throughput FastAPI Streaming Gateway with Semantic Cache",
+      "summary": "Architect an OpenAI-compatible high-performance LLM gateway backed by vLLM/Ollama, featuring Server-Sent Events (SSE) token streaming, two-tier Redis semantic vector caching, and Prometheus latency metrics.",
+      "deliverables": [
+        "Implement asynchronous FastAPI endpoints mirroring OpenAI /v1/chat/completions",
+        "Build two-tier cache: exact SHA256 prompt matching + Redis cosine vector similarity",
+        "Deploy local 4-bit quantized model and benchmark continuous batching speedup",
+        "Expose Prometheus metrics for TTFT (Time to First Token), latency p99, and token/sec"
+      ]
+    },
+    "videos": [
+      {
+        "id": "inf-01",
+        "title": "vLLM and PagedAttention Explained: How to Serve LLMs 20x Faster",
+        "instructor": "Umar Jamil",
+        "channel": "Umar Jamil",
+        "youtube_id": "5ZlavRFn988",
+        "url": "https://www.youtube.com/watch?v=5ZlavRFn988",
+        "duration": "45m",
+        "description": "Deep technical analysis of memory fragmentation in KV caches, how virtual memory and OS paging inspired PagedAttention, and how continuous batching maximizes GPU utilization.",
+        "checkpoints": [
+          "Explain memory bottlenecks caused by redundant KV cache pre-allocation",
+          "Understand PagedAttention virtual block tables and non-contiguous memory allocations",
+          "Deploy vLLM server with continuous batching and benchmark token throughput"
+        ]
+      },
+      {
+        "id": "inf-02",
+        "title": "Quantization Explained: GGUF, AWQ, GPTQ and 4-Bit Precision",
+        "instructor": "Tanishq Abraham",
+        "channel": "Weights & Biases",
+        "youtube_id": "TPcXVJ1VSRI",
+        "url": "https://www.youtube.com/watch?v=TPcXVJ1VSRI",
+        "duration": "50m",
+        "description": "Comprehensive explanation of post-training quantization (PTQ): FP16 vs INT8 vs INT4, zero-point and scale factors, activation-aware quantization (AWQ), and GGUF format.",
+        "checkpoints": [
+          "Calculate memory requirements across FP16, INT8, and INT4 precision formats",
+          "Explain the difference between weight-only and weight-activation quantization",
+          "Convert and run 4-bit quantized open-source models using llama.cpp and Ollama"
+        ]
+      },
+      {
+        "id": "inf-03",
+        "title": "Building a Production LLM API Gateway with FastAPI and LiteLLM",
+        "instructor": "ArjanCodes",
+        "channel": "ArjanCodes",
+        "youtube_id": "d8WwR2Q2_wE",
+        "url": "https://www.youtube.com/watch?v=d8WwR2Q2_wE",
+        "duration": "40m",
+        "description": "Architecting an enterprise LLM proxy with load balancing, fallback providers, rate limiting, semantic response caching with Redis, and SSE streaming.",
+        "checkpoints": [
+          "Implement asynchronous SSE (Server-Sent Events) streaming responses in FastAPI",
+          "Configure LiteLLM proxy for automated multi-provider failover routing",
+          "Implement Redis semantic caching for repetitive query optimization"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "12-fine-tuning",
+    "number": "12",
+    "title": "Fine-Tuning & Model Alignment",
+    "badge": "Model Adaptation",
+    "icon": "fa-solid fa-sliders",
+    "hours": 26,
+    "summary": "Adapt foundation models to specialized domain tasks using PEFT, LoRA, QLoRA, Supervised Fine-Tuning (SFT), Direct Preference Optimization (DPO), and Unsloth.",
+    "skills": [
+      "LoRA & QLoRA Mathematical Foundations",
+      "Hugging Face TRL & SFTTrainer",
+      "Dataset Preparation & Formatting (ShareGPT, Alpaca)",
+      "Direct Preference Optimization (DPO)",
+      "High-Speed Training with Unsloth"
+    ],
+    "project": {
+      "id": "proj-mod-12",
+      "title": "Mini-Project: Specialized Domain Model Fine-Tuning with QLoRA & DPO",
+      "summary": "Curate an instruction-response dataset, train 4-bit QLoRA adapters on an open 8B model using Unsloth/TRL, perform Direct Preference Optimization (DPO) to align stylistic preferences, and merge weights for deployment.",
+      "deliverables": [
+        "Clean and tokenize custom domain dataset with strict instruction formatting",
+        "Configure FastLanguageModel and train LoRA adapters with gradient checkpointing",
+        "Execute DPO alignment step using chosen vs rejected response pairs",
+        "Merge LoRA adapter weights and export GGUF model for local inference testing"
+      ]
+    },
+    "videos": [
+      {
+        "id": "ft-01",
+        "title": "LoRA & QLoRA Explained with Code from Scratch",
+        "instructor": "Umar Jamil",
+        "channel": "Umar Jamil",
+        "youtube_id": "PXERunGBUaA",
+        "url": "https://www.youtube.com/watch?v=PXERunGBUaA",
+        "duration": "1h 10m",
+        "description": "Deep mathematical and implementation breakdown of Low-Rank Adaptation (LoRA) and 4-bit NormalFloat QLoRA: low-rank decomposition matrices, adapter fusion, and memory savings.",
+        "checkpoints": [
+          "Understand low-rank matrix decomposition W + A*B with rank r",
+          "Explain NF4 (NormalFloat 4) data type and double quantization in QLoRA",
+          "Inject custom LoRA adapters into PyTorch attention projection layers"
+        ]
+      },
+      {
+        "id": "ft-02",
+        "title": "Fine-Tuning LLaMA 3 5x Faster with Unsloth",
+        "instructor": "Daniel Han",
+        "channel": "Unsloth AI",
+        "youtube_id": "hBbzIomVqL0",
+        "url": "https://www.youtube.com/watch?v=hBbzIomVqL0",
+        "duration": "45m",
+        "description": "Hands-on tutorial fine-tuning LLaMA 3 and Mistral using Unsloth's optimized manual backprop derivations, reducing VRAM usage by 80% and increasing training throughput.",
+        "checkpoints": [
+          "Format custom datasets into instruction-response conversation templates",
+          "Configure FastLanguageModel and PeftModel with targeted LoRA parameters",
+          "Export fine-tuned LoRA weights to 16-bit and GGUF formats for deployment"
+        ]
+      },
+      {
+        "id": "ft-03",
+        "title": "RLHF and Direct Preference Optimization (DPO) Explained",
+        "instructor": "Yannic Kilcher",
+        "channel": "Yannic Kilcher",
+        "youtube_id": "2KkU_wA5m9B",
+        "url": "https://www.youtube.com/watch?v=2KkU_wA5m9B",
+        "duration": "55m",
+        "description": "Deep dive into model alignment: why traditional RLHF with reward models is complex and unstable, and how DPO mathematically optimizes preferences directly with cross-entropy.",
+        "checkpoints": [
+          "Compare SFT baseline with preference pairs (chosen vs rejected responses)",
+          "Derive the DPO objective function bypassing external reward models",
+          "Train a DPOTrainer on preference datasets and measure alignment win-rates"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "13-voice-ai",
+    "number": "13",
+    "title": "Voice AI & Real-Time Audio",
+    "badge": "Multimodal",
+    "icon": "fa-solid fa-microphone-lines",
+    "hours": 22,
+    "summary": "Build ultra-low-latency real-time voice agents: OpenAI Whisper streaming STT, Silero VAD (Voice Activity Detection), modern TTS models (XTTS, Kokoro), and WebRTC with LiveKit.",
+    "skills": [
+      "Real-Time Speech-to-Text (Whisper, faster-whisper)",
+      "Voice Activity Detection (Silero VAD)",
+      "Text-to-Speech & Neural Vocoders",
+      "WebRTC & LiveKit Voice Agent Pipelines",
+      "End-to-End Latency Optimization (<500ms)"
+    ],
+    "project": {
+      "id": "proj-mod-13",
+      "title": "Mini-Project: Sub-500ms Conversational Voice Bot with LiveKit & WebRTC",
+      "summary": "Develop an end-to-end conversational voice agent using WebRTC, Silero VAD for speech interruption, faster-whisper for streaming transcription, Groq/OpenAI for fast completions, and Kokoro/Cartesia for streaming audio synthesis.",
+      "deliverables": [
+        "Establish bidirectional WebRTC audio track streaming via LiveKit Agents",
+        "Implement low-latency Silero VAD detecting speech boundaries and user barge-in",
+        "Stream LLM token sentences into chunked neural audio synthesis",
+        "Benchmark and optimize end-to-end roundtrip voice latency under 500ms"
+      ]
+    },
+    "videos": [
+      {
+        "id": "voice-01",
+        "title": "OpenAI Whisper Architecture & Streaming Transcription",
+        "instructor": "AssemblyAI",
+        "channel": "AssemblyAI",
+        "youtube_id": "ocP1g1aR9a0",
+        "url": "https://www.youtube.com/watch?v=ocP1g1aR9a0",
+        "duration": "35m",
+        "description": "Technical breakdown of OpenAI Whisper: log-Mel spectrogram preprocessing, sequence-to-sequence Transformer architecture, and faster-whisper CTranslate2 optimization.",
+        "checkpoints": [
+          "Convert raw PCM audio streams into log-Mel spectrogram feature vectors",
+          "Deploy faster-whisper with INT8 quantization for sub-second chunk decoding",
+          "Implement sliding-window audio buffer handling for continuous streaming speech"
+        ]
+      },
+      {
+        "id": "voice-02",
+        "title": "Building Real-Time Voice Agents with LiveKit and WebRTC",
+        "instructor": "David Zhao",
+        "channel": "LiveKit",
+        "youtube_id": "3Z8k1xY7r4E",
+        "url": "https://www.youtube.com/watch?v=3Z8k1xY7r4E",
+        "duration": "45m",
+        "description": "How to architect sub-500ms real-time conversational voice agents using LiveKit Agents framework, WebRTC audio tracks, Silero VAD, and streaming LLM token generation.",
+        "checkpoints": [
+          "Configure LiveKit room audio tracks and WebRTC client connections",
+          "Integrate Silero VAD for low-latency speech interruption and turn-taking",
+          "Pipe LLM token streams directly into sentence-boundary streaming TTS synthesizers"
+        ]
+      },
+      {
+        "id": "voice-03",
+        "title": "Modern Text-to-Speech (TTS): How FastSpeech, XTTS and Kokoro Work",
+        "instructor": "Neural Audio Lab",
+        "channel": "DeepLearning.AI",
+        "youtube_id": "4m6k2wY8q3A",
+        "url": "https://www.youtube.com/watch?v=4m6k2wY8q3A",
+        "duration": "40m",
+        "description": "Architecture of state-of-the-art neural speech synthesis: acoustic models, mel-spectrogram generation, duration predictors, neural vocoders (HiFi-GAN), and voice cloning.",
+        "checkpoints": [
+          "Understand acoustic models and HiFi-GAN neural vocoder waveform synthesis",
+          "Deploy lightweight open-source TTS models (Kokoro-82M, XTTS) locally",
+          "Stream synthesized audio chunks over WebSockets to client speakers"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "14-ai-security",
+    "number": "14",
+    "title": "AI Security, Safety & Guardrails",
+    "badge": "Defense",
+    "icon": "fa-solid fa-shield-halved",
+    "hours": 16,
+    "summary": "Secure production AI systems against OWASP Top 10 for LLMs: prompt injections, jailbreaks, data poisoning, insecure output handling, PII masking, and NeMo Guardrails.",
+    "skills": [
+      "OWASP Top 10 for LLM Applications",
+      "Direct & Indirect Prompt Injection Defense",
+      "Guardrails AI & NeMo Guardrails Implementation",
+      "PII Redaction & Differential Privacy",
+      "Red-Teaming & Adversarial Attack Simulation"
+    ],
+    "project": {
+      "id": "proj-mod-14",
+      "title": "Mini-Project: Adversarial Prompt Firewall & NeMo Guardrails Shield",
+      "summary": "Build a programmable security proxy intercepting LLM requests: detects prompt injections and jailbreak patterns with semantic classifiers, enforces Colang conversation rails, and masks PII in responses.",
+      "deliverables": [
+        "Implement regex and embedding-based classifier detecting prompt injection attacks",
+        "Configure NVIDIA NeMo Guardrails Colang policy enforcing strict topical boundaries",
+        "Sanitize incoming text stripping PII (emails, phone numbers, API keys)",
+        "Conduct automated red-teaming simulation evaluating bypass defense rates"
+      ]
+    },
+    "videos": [
+      {
+        "id": "sec-01",
+        "title": "OWASP Top 10 for LLM Applications: Full Security Breakdown",
+        "instructor": "John Hammond",
+        "channel": "John Hammond",
+        "youtube_id": "q0f4J0a8y0A",
+        "url": "https://www.youtube.com/watch?v=q0f4J0a8y0A",
+        "duration": "45m",
+        "description": "Practical demonstrations of critical LLM vulnerabilities: prompt injection (direct and indirect via crawled web content), sensitive info leakage, and insecure plugin design.",
+        "checkpoints": [
+          "Identify direct and indirect prompt injection vectors in RAG and Agent pipelines",
+          "Implement multi-stage input sanitization and delimiter boundary enforcement",
+          "Audit tool calling execution boundaries to prevent remote code execution (RCE)"
+        ]
+      },
+      {
+        "id": "sec-02",
+        "title": "Implementing Programmable Guardrails with NeMo Guardrails",
+        "instructor": "Traversy Media & NVIDIA",
+        "channel": "Traversy Media",
+        "youtube_id": "5w3k1y9q2A0",
+        "url": "https://www.youtube.com/watch?v=5w3k1y9q2A0",
+        "duration": "40m",
+        "description": "Building programmable guardrails using NVIDIA NeMo Guardrails: Colang dialogue modeling, topical rails, safety rails, execution rails, and input/output filters.",
+        "checkpoints": [
+          "Write Colang scripts enforcing topical conversation boundaries",
+          "Configure safety rails blocking prohibited topics and jailbreak patterns",
+          "Implement automated PII (Personally Identifiable Information) redaction filters"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "15-system-design",
+    "number": "15",
+    "title": "AI System Design & Scalable Architecture",
+    "badge": "Architecture",
+    "icon": "fa-solid fa-cubes-stacked",
+    "hours": 24,
+    "summary": "Design scalable, fault-tolerant enterprise AI systems: distributed caching, rate-limiting, multi-region routing, cost optimization, asynchronous task queues, and ML design interviews.",
+    "skills": [
+      "ML System Design Interview Framework",
+      "Distributed Semantic Caching with Redis",
+      "Fault-Tolerant LLM Gateway Architecture",
+      "Asynchronous Task Queues with Celery / BullMQ",
+      "Cost Modeling & Token Budget Allocation"
+    ],
+    "project": {
+      "id": "proj-mod-15",
+      "title": "Mini-Project: Multi-Tenant Enterprise AI Gateway Architecture & Blueprints",
+      "summary": "Produce a complete production system architecture blueprint and running prototype for an enterprise LLM platform with tenant quota enforcement, rate limiting, async reasoning worker pools, and failover routing.",
+      "deliverables": [
+        "Design full architectural diagrams (data flow, auth, caching, model failovers)",
+        "Implement token bucket rate limiter with Redis backend enforcing tiered SLAs",
+        "Build asynchronous task worker pool using BullMQ / Celery for reasoning models",
+        "Write technical runbook detailing cold-start scaling, failover, and disaster recovery"
+      ]
+    },
+    "videos": [
+      {
+        "id": "sys-01",
+        "title": "Machine Learning System Design Interview Framework",
+        "instructor": "Chip Huyen",
+        "channel": "Chip Huyen",
+        "youtube_id": "7v2q0k4w9M0",
+        "url": "https://www.youtube.com/watch?v=7v2q0k4w9M0",
+        "duration": "1h 15m",
+        "description": "Author of 'Designing Machine Learning Systems' explains the end-to-end framework for architecting real-world ML systems under production constraints.",
+        "checkpoints": [
+          "Clarify business goals, latency SLAs, throughput targets, and constraints",
+          "Design scalable training, data ingestion, feature store, and serving architectures",
+          "Analyze data drift, concept drift, and automated retraining triggers"
+        ]
+      },
+      {
+        "id": "sys-02",
+        "title": "Designing a High-Scale Enterprise LLM Platform",
+        "instructor": "Gaurav Sen",
+        "channel": "Gaurav Sen",
+        "youtube_id": "6w2k1q9w8M0",
+        "url": "https://www.youtube.com/watch?v=6w2k1q9w8M0",
+        "duration": "50m",
+        "description": "Full system architecture breakdown of an enterprise AI platform: API gateways, load balancers, rate limiting, semantic caching, worker pools, and fallback cascades.",
+        "checkpoints": [
+          "Architect an API gateway with token-bucket rate limiting and tier quotas",
+          "Design a two-tier cache (exact SHA256 match + vector semantic similarity)",
+          "Implement asynchronous job queues handling long-running reasoning tasks"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "projects",
+    "number": "16",
+    "title": "Capstone Engineering Projects",
+    "badge": "Portfolio",
+    "icon": "fa-solid fa-rocket",
+    "hours": 50,
+    "summary": "Five comprehensive, production-ready capstone projects that demonstrate mastery of the entire Applied AI Engineering curriculum for your resume and portfolio.",
+    "skills": [
+      "Full-Stack AI Architecture",
+      "MCP Server & Client Integration",
+      "Enterprise Hybrid RAG",
+      "Real-Time WebRTC Voice Bots",
+      "Distributed High-Throughput Model Serving"
+    ],
+    "project": {
+      "id": "proj-mod-16",
+      "title": "Capstone Portfolio Suite: 5 Production Deployments",
+      "summary": "Deliver and deploy all 5 enterprise-grade portfolio applications to demonstrate master-level Applied AI Engineering competency.",
+      "deliverables": [
+        "Capstone 1: Multi-Modal Autonomous Agent with Model Context Protocol (MCP)",
+        "Capstone 2: Enterprise Production RAG with Hybrid Search & Neural Reranker",
+        "Capstone 3: Real-Time Sub-500ms Conversational Voice Agent",
+        "Capstone 4: Domain-Specialized LLM Fine-Tuning Pipeline with QLoRA & DPO",
+        "Capstone 5: High-Throughput vLLM Inference Gateway with Semantic Cache"
+      ]
+    },
+    "videos": [
+      {
+        "id": "proj-01",
+        "title": "Project 1: Multi-Modal Autonomous Agent with Model Context Protocol (MCP)",
+        "instructor": "Applied AI Engineering Team",
+        "channel": "Applied AI Engineering",
+        "youtube_id": "rbtQ_E5L68A",
+        "url": "https://www.youtube.com/watch?v=rbtQ_E5L68A",
+        "duration": "Project Guide",
+        "description": "Build an autonomous desktop and web research agent that connects via MCP to local filesystem, PostgreSQL database, and external search tools to execute complex research briefs.",
+        "checkpoints": [
+          "Implement a custom FastMCP server exposing structured database and file tools",
+          "Build a stateful LangGraph agent orchestrating multi-step research execution",
+          "Implement human-in-the-loop confirmation before running destructive actions"
+        ]
+      },
+      {
+        "id": "proj-02",
+        "title": "Project 2: Enterprise Production RAG with Hybrid Search & Neural Reranker",
+        "instructor": "Applied AI Engineering Team",
+        "channel": "Applied AI Engineering",
+        "youtube_id": "wd7TZ4w1mSw",
+        "url": "https://www.youtube.com/watch?v=wd7TZ4w1mSw",
+        "duration": "Project Guide",
+        "description": "Architect a high-performance RAG pipeline indexing 100,000+ technical documents using PGVector HNSW, BM25 hybrid fusion, and Cohere neural reranking with RAGAS evaluation.",
+        "checkpoints": [
+          "Build semantic chunking and metadata extraction pipeline with Pydantic",
+          "Implement Reciprocal Rank Fusion combining dense embeddings and BM25",
+          "Add automated RAGAS evaluation suite testing Faithfulness and Relevance in CI/CD"
+        ]
+      },
+      {
+        "id": "proj-03",
+        "title": "Project 3: Real-Time Sub-500ms Conversational Voice Agent",
+        "instructor": "Applied AI Engineering Team",
+        "channel": "Applied AI Engineering",
+        "youtube_id": "3Z8k1xY7r4E",
+        "url": "https://www.youtube.com/watch?v=3Z8k1xY7r4E",
+        "duration": "Project Guide",
+        "description": "Develop a real-time voice-to-voice bot using WebRTC, LiveKit Agents, Silero VAD, streaming Faster-Whisper transcription, and Kokoro neural speech synthesis.",
+        "checkpoints": [
+          "Establish low-latency WebRTC audio streaming pipeline with LiveKit",
+          "Implement conversational turn-taking and user speech interruption handling",
+          "Optimize end-to-end voice roundtrip latency below 500ms"
+        ]
+      },
+      {
+        "id": "proj-04",
+        "title": "Project 4: Domain-Specialized LLM Fine-Tuning Pipeline with QLoRA & DPO",
+        "instructor": "Applied AI Engineering Team",
+        "channel": "Applied AI Engineering",
+        "youtube_id": "PXERunGBUaA",
+        "url": "https://www.youtube.com/watch?v=PXERunGBUaA",
+        "duration": "Project Guide",
+        "description": "Fine-tune an open-source 8B parameter model (LLaMA 3 or Mistral) on technical code and API documentation using QLoRA 4-bit quantization, followed by DPO alignment.",
+        "checkpoints": [
+          "Curate and clean a domain dataset with strict instruction-response pairs",
+          "Fine-tune with Unsloth / Hugging Face TRL using QLoRA adapters",
+          "Execute DPO alignment and evaluate win-rate against the base foundation model"
+        ]
+      },
+      {
+        "id": "proj-05",
+        "title": "Project 5: High-Throughput vLLM Inference Gateway with Semantic Cache",
+        "instructor": "Applied AI Engineering Team",
+        "channel": "Applied AI Engineering",
+        "youtube_id": "5ZlavRFn988",
+        "url": "https://www.youtube.com/watch?v=5ZlavRFn988",
+        "duration": "Project Guide",
+        "description": "Deploy an enterprise-grade OpenAI-compatible inference gateway fronted by FastAPI, Redis semantic vector caching, continuous batching on vLLM, and Prometheus metrics.",
+        "checkpoints": [
+          "Serve 4-bit quantized open model with vLLM PagedAttention continuous batching",
+          "Implement two-tier semantic caching layer reducing redundant API costs by 60%",
+          "Expose Prometheus metrics for latency p95/p99, throughput (tokens/sec), and queue depth"
+        ]
+      }
+    ]
+  }
+]
