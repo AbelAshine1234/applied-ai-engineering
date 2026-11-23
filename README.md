@@ -16,6 +16,43 @@ Every module has specific implementation tasks, practical exercises, deliverable
 
 ---
 
+## Interactive Documentation Platform
+
+- **Live Public Documentation:** [https://abelashine1234.github.io/applied-ai-engineering/](https://abelashine1234.github.io/applied-ai-engineering/)
+- **Next.js & Docker Documentation Server:** Run locally on port `3000` via Docker Compose.
+
+### Docker Quickstart
+
+```bash
+# Clone repository
+git clone https://github.com/AbelAshine1234/applied-ai-engineering.git
+cd applied-ai-engineering
+
+# Start documentation platform in Docker
+docker compose up -d
+
+# Open in browser
+http://localhost:3000
+```
+
+### Local Development (Next.js)
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Production standalone build
+npm run build
+
+# Static export for GitHub Pages
+npm run export
+```
+
+---
+
 ## Priority Track for Two-Month Job Target
 
 > **Strategic Priority Guidance:**  

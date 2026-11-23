@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --canvas: #f8f9fa;
+  --card: #ffffff;
+  --sidebar: #f5f6f8;
+  --ink: #0c0c0c;
+  --ink-secondary: #24292f;
+  --muted: #57606a;
+  --subtle: #8c95a0;
+  --line: #e1e4e8;
+  --line-hover: #d0d7de;
+  --accent: #f2681c;
+  --accent-hover: #db540b;
+  --accent-subtle: #fff7ed;
+  --code: #161b22;
+  --code-ink: #f0f6fc;
+  --code-border: #30363d;
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  --canvas: #090a0c;
+  --card: #121316;
+  --sidebar: #0e0f12;
+  --ink: #f4f5f7;
+  --ink-secondary: #d0d7de;
+  --muted: #8b949e;
+  --subtle: #6e7681;
+  --line: #21262d;
+  --line-hover: #30363d;
+  --accent: #f2681c;
+  --accent-hover: #fa813d;
+  --accent-subtle: #241913;
+  --code: #0d1117;
+  --code-ink: #f0f6fc;
+  --code-border: #21262d;
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--canvas);
+  color: var(--ink);
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar for modern documentation feel */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--line);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--subtle);
+}
+
+/* Documentation code block styling */
+pre {
+  background-color: var(--code);
+  color: var(--code-ink);
+  border: 1px solid var(--code-border);
+  border-radius: 6px;
+  overflow-x: auto;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.84rem;
+  line-height: 1.5;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
