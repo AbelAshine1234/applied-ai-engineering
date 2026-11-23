@@ -18,7 +18,8 @@ Every module has specific implementation tasks, practical exercises, deliverable
 
 ## Interactive Documentation Platform
 
-- **Live Public Documentation:** [https://abelashine1234.github.io/applied-ai-engineering/](https://abelashine1234.github.io/applied-ai-engineering/)
+- **Production Domain:** [https://learn.weleba.tech](https://learn.weleba.tech)
+- **Live Documentation (GitHub Pages):** [https://abelashine1234.github.io/applied-ai-engineering/](https://abelashine1234.github.io/applied-ai-engineering/)
 - **Next.js & Docker Documentation Server:** Run locally on port `3000` via Docker Compose.
 
 ### Docker Quickstart
