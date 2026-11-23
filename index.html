@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Applied AI Engineering — Curriculum & Mastery Roadmap</title>
-    <meta name="description" content="A comprehensive, battle-tested applied AI engineering curriculum and progress tracker. Master Python, deep learning, transformers from scratch, production RAG, agents, MCP, fine-tuning, and scalable inference.">
+    <title>Applied AI Engineering — Master Course & 55-Module Production Roadmap</title>
+    <meta name="description" content="A comprehensive 16-phase, 55-module Applied AI Engineering master course and progress tracker. Master Python, LLM engineering, RAG, multi-agent systems, MCP, evaluation, and scalable model serving.">
 
     <!-- Google Fonts: Inter, Playfair Display, Fira Code -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,7 +27,7 @@
         <div class="container">
             <div class="nav-container">
                 <a href="#hero" class="nav-brand">
-                    APPLIED AI <span class="brand-sub">/ ROADMAP</span>
+                    APPLIED AI <span class="brand-sub">/ MASTER COURSE</span>
                 </a>
                 <div class="nav-actions">
                     <button id="btn-export-progress" class="btn btn-secondary btn-sm" title="Export progress to JSON file">
@@ -38,7 +38,7 @@
                     </button>
                     <input type="file" id="import-file-input" accept=".json" style="display: none;">
                     <a href="https://github.com/AbelAshine1234/applied-ai-engineering" target="_blank" class="btn btn-primary btn-sm">
-                        <i class="fa-brands fa-github"></i> View GitHub Repo
+                        <i class="fa-brands fa-github"></i> GitHub Repo
                     </a>
                 </div>
             </div>
@@ -51,24 +51,45 @@
             <div class="container">
                 <div class="status-pill">
                     <span class="pulse-dot"></span>
-                    <span class="status-text">APPLIED AI ENGINEERING / PRODUCTION MASTERY ROADMAP</span>
+                    <span class="status-text">16 PHASES · 55 PRACTICAL MODULES · 4 MAJOR PORTFOLIO PROJECTS</span>
                 </div>
 
                 <h1 class="hero-headline">
-                    Architecting scalable intelligence from <em>mathematical foundations</em> to production agents.
+                    Applied AI Engineering <em>Master Course</em>
                 </h1>
 
                 <p class="hero-bio-para">
-                    A rigorous, zero-fluff syllabus bridging modern systems architecture with applied AI. Featuring curated lectures from world-class researchers (Andrej Karpathy, 3Blue1Brown, Umar Jamil, Harrison Chase), hands-on code checkpoints, dedicated chapter mini-projects, and end-to-end production capstones.
+                    Become a production-oriented Applied AI Engineer capable of designing, implementing, evaluating, deploying and optimizing modern AI systems. Every module includes specific implementation tasks, practical exercises, deliverables, and a completion test.
                 </p>
+
+                <!-- Course Completion Standard Card -->
+                <div class="standards-card">
+                    <div class="standards-header">
+                        <i class="fa-solid fa-shield-halved" style="color: var(--accent-ice); font-size: 1.1rem;"></i>
+                        <span style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; color: var(--text-pure); letter-spacing: 0.08em; text-transform: uppercase;">
+                            The 9-Step Learning Contract — Demonstrable Engineering Competence
+                        </span>
+                    </div>
+                    <div class="standards-grid">
+                        <div class="standard-item"><i class="fa-solid fa-check"></i> <span><strong>1. Concepts:</strong> Understand the underlying theory and mechanics.</span></div>
+                        <div class="standard-item"><i class="fa-solid fa-check"></i> <span><strong>2. Guided Code:</strong> Build working example from first principles.</span></div>
+                        <div class="standard-item"><i class="fa-solid fa-check"></i> <span><strong>3. Independent Tasks:</strong> Solve problems without copying tutorials.</span></div>
+                        <div class="standard-item"><i class="fa-solid fa-check"></i> <span><strong>4. Module Project:</strong> Build the designated production deliverable.</span></div>
+                        <div class="standard-item"><i class="fa-solid fa-check"></i> <span><strong>5. Test Suite:</strong> Write unit/integration tests covering edge cases.</span></div>
+                        <div class="standard-item"><i class="fa-solid fa-check"></i> <span><strong>6. Architecture:</strong> Document system latency, footprint and trade-offs.</span></div>
+                        <div class="standard-item"><i class="fa-solid fa-check"></i> <span><strong>7. Public Log:</strong> Commit to GitHub and publish technical notes.</span></div>
+                        <div class="standard-item"><i class="fa-solid fa-check"></i> <span><strong>8. Claude Audit:</strong> Run code review prompt against production rubrics.</span></div>
+                        <div class="standard-item"><i class="fa-solid fa-check"></i> <span><strong>9. Assessment:</strong> Pass hands-on verification before advancing.</span></div>
+                    </div>
+                </div>
 
                 <!-- Master Progress Bar -->
                 <div class="master-progress-container">
                     <div class="progress-header-row">
                         <span class="progress-title">
-                            <i class="fa-solid fa-chart-pie" style="color: var(--accent-ice);"></i> Master Curriculum Progress
+                            <i class="fa-solid fa-chart-pie" style="color: var(--accent-ice);"></i> Master Course Progress
                         </span>
-                        <span id="master-progress-percentage" class="progress-percentage">0% Complete</span>
+                        <span id="master-progress-percentage" class="progress-percentage">0 of 55 Modules Completed (0%)</span>
                     </div>
                     <div class="progress-track">
                         <div id="master-progress-fill" class="progress-fill" style="width: 0%;"></div>
@@ -83,25 +104,25 @@
                             <i class="fa-solid fa-percent stat-icon"></i>
                         </div>
                         <div id="stat-total-progress" class="stat-value">0%</div>
-                        <div class="stat-sub">Across all curriculum items</div>
+                        <div class="stat-sub">Across all 55 modules</div>
                     </div>
 
                     <div class="stat-card">
                         <div class="stat-header">
-                            <span class="stat-label">Mastered Checkpoints</span>
-                            <i class="fa-solid fa-square-check stat-icon"></i>
-                        </div>
-                        <div id="stat-checkpoints" class="stat-value">0 / 0</div>
-                        <div class="stat-sub">Lectures and project tasks</div>
-                    </div>
-
-                    <div class="stat-card">
-                        <div class="stat-header">
-                            <span class="stat-label">Completed Modules</span>
+                            <span class="stat-label">Modules Completed</span>
                             <i class="fa-solid fa-cubes stat-icon"></i>
                         </div>
-                        <div id="stat-modules" class="stat-value">0 / 16</div>
-                        <div class="stat-sub">Fully verified chapters</div>
+                        <div id="stat-course-progress" class="stat-value">0 / 55</div>
+                        <div class="stat-sub">Target deliverables built</div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <span class="stat-label">Completed Phases</span>
+                            <i class="fa-solid fa-layer-group stat-icon"></i>
+                        </div>
+                        <div id="stat-phases-completed" class="stat-value">0 / 16</div>
+                        <div class="stat-sub">All modules in phase passed</div>
                     </div>
 
                     <div class="stat-card">
@@ -109,8 +130,81 @@
                             <span class="stat-label">Estimated Effort</span>
                             <i class="fa-regular fa-clock stat-icon"></i>
                         </div>
-                        <div id="stat-hours" class="stat-value">0h / 380h</div>
+                        <div id="stat-hours" class="stat-value">0h / 750h</div>
                         <div class="stat-sub">Hands-on engineering study</div>
+                    </div>
+                </div>
+
+                <!-- 16-Phase Quick Matrix -->
+                <div class="phase-quick-tiles-container">
+                    <div class="quick-tiles-title">
+                        <i class="fa-solid fa-list-ol"></i> Phase Quick Matrix (Click to Jump)
+                    </div>
+                    <div class="phase-quick-tiles-grid">
+                        <div class="phase-quick-tile" id="quick-tile-phase-01" data-phase-id="phase-01">
+                            <span class="quick-tile-name">1. Python AI</span>
+                            <span class="quick-tile-count">0/4</span>
+                        </div>
+                        <div class="phase-quick-tile" id="quick-tile-phase-02" data-phase-id="phase-02">
+                            <span class="quick-tile-name">2. Math & ML</span>
+                            <span class="quick-tile-count">0/4</span>
+                        </div>
+                        <div class="phase-quick-tile" id="quick-tile-phase-03" data-phase-id="phase-03">
+                            <span class="quick-tile-name">3. Deep Learning</span>
+                            <span class="quick-tile-count">0/3</span>
+                        </div>
+                        <div class="phase-quick-tile" id="quick-tile-phase-04" data-phase-id="phase-04">
+                            <span class="quick-tile-name">4. LLMs</span>
+                            <span class="quick-tile-count">0/4</span>
+                        </div>
+                        <div class="phase-quick-tile" id="quick-tile-phase-05" data-phase-id="phase-05">
+                            <span class="quick-tile-name">5. LLM App Eng</span>
+                            <span class="quick-tile-count">0/4</span>
+                        </div>
+                        <div class="phase-quick-tile" id="quick-tile-phase-06" data-phase-id="phase-06">
+                            <span class="quick-tile-name">6. Embeddings & RAG</span>
+                            <span class="quick-tile-count">0/4</span>
+                        </div>
+                        <div class="phase-quick-tile" id="quick-tile-phase-07" data-phase-id="phase-07">
+                            <span class="quick-tile-name">7. AI Agents</span>
+                            <span class="quick-tile-count">0/5</span>
+                        </div>
+                        <div class="phase-quick-tile" id="quick-tile-phase-08" data-phase-id="phase-08">
+                            <span class="quick-tile-name">8. MCP & Interop</span>
+                            <span class="quick-tile-count">0/3</span>
+                        </div>
+                        <div class="phase-quick-tile" id="quick-tile-phase-09" data-phase-id="phase-09">
+                            <span class="quick-tile-name">9. Evaluation</span>
+                            <span class="quick-tile-count">0/4</span>
+                        </div>
+                        <div class="phase-quick-tile" id="quick-tile-phase-10" data-phase-id="phase-10">
+                            <span class="quick-tile-name">10. Infra & Serving</span>
+                            <span class="quick-tile-count">0/4</span>
+                        </div>
+                        <div class="phase-quick-tile" id="quick-tile-phase-11" data-phase-id="phase-11">
+                            <span class="quick-tile-name">11. Fine-Tuning</span>
+                            <span class="quick-tile-count">0/3</span>
+                        </div>
+                        <div class="phase-quick-tile" id="quick-tile-phase-12" data-phase-id="phase-12">
+                            <span class="quick-tile-name">12. Multimodal</span>
+                            <span class="quick-tile-count">0/3</span>
+                        </div>
+                        <div class="phase-quick-tile" id="quick-tile-phase-13" data-phase-id="phase-13">
+                            <span class="quick-tile-name">13. Security</span>
+                            <span class="quick-tile-count">0/2</span>
+                        </div>
+                        <div class="phase-quick-tile" id="quick-tile-phase-14" data-phase-id="phase-14">
+                            <span class="quick-tile-name">14. Knowledge Graphs</span>
+                            <span class="quick-tile-count">0/2</span>
+                        </div>
+                        <div class="phase-quick-tile" id="quick-tile-phase-15" data-phase-id="phase-15">
+                            <span class="quick-tile-name">15. RL & Reasoning</span>
+                            <span class="quick-tile-count">0/3</span>
+                        </div>
+                        <div class="phase-quick-tile" id="quick-tile-phase-16" data-phase-id="phase-16">
+                            <span class="quick-tile-name">16. Product & Systems</span>
+                            <span class="quick-tile-count">0/3</span>
+                        </div>
                     </div>
                 </div>
 
@@ -118,18 +212,33 @@
                 <div class="toolbar-section">
                     <div class="search-box">
                         <i class="fa-solid fa-magnifying-glass"></i>
-                        <input type="text" id="search-input" placeholder="Search topics, skills, instructors, videos...">
+                        <input type="text" id="search-input" placeholder="Search 55 modules, tasks, deliverables, projects...">
                     </div>
 
                     <div class="filter-pills">
-                        <button class="filter-pill active" data-filter="all">All Modules</button>
-                        <button class="filter-pill" data-filter="foundations">Foundations (01-04)</button>
-                        <button class="filter-pill" data-filter="llm">LLM Core (05-07)</button>
-                        <button class="filter-pill" data-filter="agentic">Agents & MCP (08-10)</button>
-                        <button class="filter-pill" data-filter="production">Production & Scale (11-15)</button>
-                        <button class="filter-pill" data-filter="projects">Capstones (16)</button>
-                        <button class="filter-pill" data-filter="pending">Pending Only</button>
-                        <button class="filter-pill" data-filter="completed">Completed Only</button>
+                        <button class="filter-pill active" data-filter="all">All 55 Modules</button>
+                        <button class="filter-pill" data-filter="high-priority" style="color: var(--accent-amber); border-color: rgba(245, 158, 11, 0.4);">
+                            <i class="fa-solid fa-fire"></i> Job Target Priority Track
+                        </button>
+                        <button class="filter-pill" data-filter="phase-01">1. Python (4)</button>
+                        <button class="filter-pill" data-filter="phase-02">2. Math & ML (4)</button>
+                        <button class="filter-pill" data-filter="phase-03">3. Deep Learning (3)</button>
+                        <button class="filter-pill" data-filter="phase-04">4. LLMs (4)</button>
+                        <button class="filter-pill" data-filter="phase-05">5. LLM App Eng (4)</button>
+                        <button class="filter-pill" data-filter="phase-06">6. RAG (4)</button>
+                        <button class="filter-pill" data-filter="phase-07">7. Agents (5)</button>
+                        <button class="filter-pill" data-filter="phase-08">8. MCP (3)</button>
+                        <button class="filter-pill" data-filter="phase-09">9. Evaluation (4)</button>
+                        <button class="filter-pill" data-filter="phase-10">10. Serving (4)</button>
+                        <button class="filter-pill" data-filter="phase-11">11. Fine-Tuning (3)</button>
+                        <button class="filter-pill" data-filter="phase-12">12. Voice & Vision (3)</button>
+                        <button class="filter-pill" data-filter="phase-13">13. Security (2)</button>
+                        <button class="filter-pill" data-filter="phase-14">14. GraphRAG (2)</button>
+                        <button class="filter-pill" data-filter="phase-15">15. RL (3)</button>
+                        <button class="filter-pill" data-filter="phase-16">16. System Design (3)</button>
+                        <button class="filter-pill" data-filter="portfolio-projects">4 Major Capstones</button>
+                        <button class="filter-pill" data-filter="pending">Pending</button>
+                        <button class="filter-pill" data-filter="completed">Completed</button>
                     </div>
 
                     <div class="toolbar-actions">
@@ -139,7 +248,7 @@
                         <button id="btn-collapse-all" class="btn btn-secondary btn-sm" title="Collapse all module accordions">
                             <i class="fa-solid fa-angles-up"></i> Collapse All
                         </button>
-                        <button id="btn-reset-progress" class="btn btn-secondary btn-sm" style="color: var(--accent-rose); border-color: rgba(244, 63, 94, 0.2);" title="Reset all checked items">
+                        <button id="btn-reset-progress" class="btn btn-secondary btn-sm" style="color: var(--accent-rose); border-color: rgba(244, 63, 94, 0.2);" title="Reset progress">
                             <i class="fa-solid fa-rotate-left"></i> Reset
                         </button>
                     </div>
@@ -173,7 +282,7 @@
         <div class="container">
             <div class="footer-content">
                 <div>
-                    <strong>Applied AI Engineering Curriculum</strong> — Curated by <a href="https://abelashine.weleba.tech" target="_blank" style="color: var(--accent-ice); text-decoration: none;">Abel Ashine</a>.
+                    <strong>Applied AI Engineering Master Course</strong> — Architected by <a href="https://abelashine.weleba.tech" target="_blank" style="color: var(--accent-ice); text-decoration: none;">Abel Ashine</a>.
                 </div>
                 <div class="footer-links">
                     <a href="https://github.com/AbelAshine1234/applied-ai-engineering" target="_blank"><i class="fa-brands fa-github"></i> Repository</a>
